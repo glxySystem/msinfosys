@@ -32,6 +32,7 @@ namespace MsInfoSys
             string sql = string.Format("select * from auth_user where user_name='{0}' and user_password='{1}'", userName.Text, Password.Password);
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
+			/// 设置XXX
             DataSet ds = new DataSet();
             mda.Fill(ds, "auth_user");
             if (ds.Tables["auth_user"].Rows.Count > 0)

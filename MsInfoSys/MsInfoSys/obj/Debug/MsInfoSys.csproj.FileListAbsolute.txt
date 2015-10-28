@@ -44,3 +44,6 @@ C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debu
 C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\Sound\clock.wav
 C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_Content.g.cs
 C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csprojResolveAssemblyReference.cache
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe.config
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.exe
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.pdb

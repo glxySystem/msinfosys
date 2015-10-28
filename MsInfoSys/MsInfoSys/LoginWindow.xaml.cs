@@ -37,6 +37,9 @@ namespace MsInfoSys
             if (ds.Tables["auth_user"].Rows.Count > 0)
             {
                 //System.Windows.MessageBox.Show("登陆成功");
+
+
+                /// 保存全局登录信息
                 AuthUser.username = userName.Text;
                 AuthUser.username = Password.Password;
 

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF1AB112-1F9A-4356-A6E9-C91DE9E45514}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MsInfoSys</RootNamespace>
+    <AssemblyName>MsInfoSys</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro, Version=1.1.2.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.0.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\database\database\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AuthUser.cs" />
+    <Compile Include="currMain\apartmentSign.xaml.cs">
+      <DependentUpon>apartmentSign.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currMain\apartmentSignAdd.xaml.cs">
+      <DependentUpon>apartmentSignAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currMain\apartmentSignEdit.xaml.cs">
+      <DependentUpon>apartmentSignEdit.xaml</DependentUpon>
+    </Compile>
+    <Page Include="currMain\apartmentSign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currMain\apartmentSignAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currMain\apartmentSignEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currMain\undergraduateInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currMain\currContent1_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currMain\currContent2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currTab\apartment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currTab\index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currTab\undergraduate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currTab\graduate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrameDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="currMain\undergraduateInfo.xaml.cs">
+      <DependentUpon>undergraduateInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currMain\currContent1_2.xaml.cs">
+      <DependentUpon>currContent1_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currMain\currContent2.xaml.cs">
+      <DependentUpon>currContent2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currTab\apartment.xaml.cs">
+      <DependentUpon>apartment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currTab\index.xaml.cs">
+      <DependentUpon>index.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currTab\undergraduate.xaml.cs">
+      <DependentUpon>undergraduate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currTab\graduate.xaml.cs">
+      <DependentUpon>graduate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\index.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\undergraduate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\undergraduateChange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\graduate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\graduateChange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\apartment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\apartmentChange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\togglemax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\togglemaxChange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\attach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\documentChange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\touxiang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\indexChange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\index\indeximg1.png" />
+    <Resource Include="icon\index\indeximg2.png" />
+    <Resource Include="icon\index\indeximg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\index\indeximg10.png" />
+    <Resource Include="icon\index\indeximg11.png" />
+    <Resource Include="icon\index\indeximg12.png" />
+    <Resource Include="icon\index\indeximg13.png" />
+    <Resource Include="icon\index\indeximg4.png" />
+    <Resource Include="icon\index\indeximg5.png" />
+    <Resource Include="icon\index\indeximg6.png" />
+    <Resource Include="icon\index\indeximg7.png" />
+    <Resource Include="icon\index\indeximg8.png" />
+    <Resource Include="icon\index\indeximg9.png" />
+    <Resource Include="icon\index\note.png" />
+    <Resource Include="icon\index\noteadd.png" />
+    <Resource Include="icon\index\noteshow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\index\indexbottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\apartmentCheck.png" />
+    <Resource Include="icon\apartmentSanitary.png" />
+    <Resource Include="icon\apartmentSign.png" />
+    <Resource Include="icon\decision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\graduateDevelopment.png" />
+    <Resource Include="icon\graduateInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\quality.png" />
+    <Resource Include="icon\undergraduateGrade.png" />
+    <Resource Include="icon\undergraduateInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\undergraduateReward.png" />
+    <Resource Include="icon\undergraduateTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\topleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\decisionChange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\qualityChange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sound\clock.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

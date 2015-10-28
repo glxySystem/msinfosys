@@ -1,0 +1,120 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:MsInfoSys">
+    <Style TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border" BorderThickness="0">
+                        <ContentPresenter Margin="0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="leftBorder">
+        <Style.Setters>
+            <Setter Property="Border.Margin" Value="6,0,6,8" />
+            <Setter Property="Border.Padding" Value="5,0,0,0" />
+            <Setter Property="Border.BorderThickness" Value="0,0,0,0" />
+            <Setter Property="Border.BorderBrush" Value="#464D57" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="userBlock">
+        <Style.Setters>
+            <Setter Property="Control.Height" Value="80" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="navBlock">
+        <Style.Setters>
+            <Setter Property="Control.Height" Value="45" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="userImg">
+        <Style.Setters>
+            <Setter Property="Control.Height" Value="80" />
+            <Setter Property="Control.Margin" Value="-10,0,0,0" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="userLabel">
+        <Style.Setters>
+            <Setter Property="Control.Width" Value="60" />
+            <Setter Property="Control.HorizontalContentAlignment" Value="Center" />
+            <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+            <Setter Property="Control.FontSize" Value="14" />
+            <Setter Property="Control.Foreground" Value="White" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="navImg">
+        <Style.Setters>
+            <Setter Property="Control.Width" Value="130" />
+            <Setter Property="Control.Height" Value="35" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="navLabel">
+        <Style.Setters>
+            <Setter Property="Control.Width" Value="90" />
+            <Setter Property="Control.HorizontalContentAlignment" Value="Center" />
+            <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+            <Setter Property="Control.FontSize" Value="14" />
+            <Setter Property="Control.Foreground" Value="#CCC" />
+            <Setter Property="Control.Margin" Value="0,10,0,0" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="tabStack">
+        <Setter Property="Panel.Margin" Value="18,6,18,0" />
+    </Style>
+    <Style x:Key="tabImg">
+        <Setter Property="Image.Width" Value="30" />
+    </Style>
+    <Style x:Key="tabLabel">
+        <Setter Property="Control.HorizontalContentAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="MainStack">
+        <Setter Property="Panel.Margin" Value="40,40,30,0" />
+        <Setter Property="Control.VerticalContentAlignment" Value="Top" />
+    </Style>
+    <Style x:Key="MainImg">
+        <Setter Property="Image.Width" Value="64" />
+    </Style>
+    <Style x:Key="MainLabel">
+        <Setter Property="Control.HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Control.Margin" Value="0,5,0,0" />
+        <Setter Property="Control.FontSize" Value="18" />
+    </Style>
+    <Style x:Key="indexBorder">
+        <Setter Property="Border.BorderThickness" Value="1" />
+        <Setter Property="Border.BorderBrush" Value="#fff" />
+        <Style.Triggers>
+            <Trigger Property="Control.IsMouseOver" Value="True">
+                <Setter Property="Control.BorderBrush" Value="#2C97DF" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="apartmentSignLabel">
+        <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+        <Setter Property="Control.FontSize" Value="14" />
+        <Setter Property="Control.Margin" Value="5,0,5,0" />
+    </Style>
+    <Style x:Key="apartmentSignCondition">
+        <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+        <Setter Property="Control.Width" Value="100" />
+        <Setter Property="Control.Height" Value="22" />
+        <Setter Property="Control.Margin" Value="0,0,5,0" />
+    </Style>
+    <Style x:Key="apartmentSignOperate">
+        <Setter Property="Control.Width" Value="80" />
+        <Setter Property="Control.Height" Value="24" />
+        <Setter Property="Control.Margin" Value="10,0,10,0" />
+        <Setter Property="Control.Background" Value="#f0f0f0" />
+        <Style.Triggers>
+            <Trigger Property="Control.IsMouseOver" Value="True">
+                <Setter Property="Control.Background" Value="#ccc" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

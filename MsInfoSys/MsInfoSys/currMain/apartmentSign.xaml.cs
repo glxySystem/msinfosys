@@ -23,7 +23,19 @@ namespace MsInfoSys.currMain
         public apartmentSign()
         {
             InitializeComponent();
+            GradeLstSource = new List<string>() { "全部", "14级", "15级" };
+            GradeLstSelect = "全部";
+            MajorLstSource = new List<string>() { "全部", "信管", "电商" };
+            MajorLstSelect = "全部";
+            this.DataContext = this;
         }
+        //早点到，年级下拉表
+        public List<String> GradeLstSource { get; set; }
+        public string GradeLstSelect { get; set; }
+
+        //早点到，专业下拉表
+        public List<String> MajorLstSource { get; set; }
+        public string MajorLstSelect { get; set; }
 
         private void SignAdd_Click(object sender, RoutedEventArgs e)
         {

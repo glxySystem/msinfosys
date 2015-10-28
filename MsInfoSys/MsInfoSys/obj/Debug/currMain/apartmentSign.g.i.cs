@@ -41,7 +41,7 @@ namespace MsInfoSys.currMain {
     public partial class apartmentSign : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
         
         
-        #line 44 "..\..\..\currMain\apartmentSign.xaml"
+        #line 36 "..\..\..\currMain\apartmentSign.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGrid apartmentSignTable;
         
@@ -49,7 +49,7 @@ namespace MsInfoSys.currMain {
         #line hidden
         
         
-        #line 64 "..\..\..\currMain\apartmentSign.xaml"
+        #line 56 "..\..\..\currMain\apartmentSign.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button SignAdd;
         
@@ -57,7 +57,7 @@ namespace MsInfoSys.currMain {
         #line hidden
         
         
-        #line 71 "..\..\..\currMain\apartmentSign.xaml"
+        #line 63 "..\..\..\currMain\apartmentSign.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button SignEdit;
         
@@ -65,7 +65,7 @@ namespace MsInfoSys.currMain {
         #line hidden
         
         
-        #line 78 "..\..\..\currMain\apartmentSign.xaml"
+        #line 70 "..\..\..\currMain\apartmentSign.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button SignDelete;
         
@@ -108,7 +108,7 @@ namespace MsInfoSys.currMain {
             case 2:
             this.SignAdd = ((System.Windows.Controls.Button)(target));
             
-            #line 65 "..\..\..\currMain\apartmentSign.xaml"
+            #line 57 "..\..\..\currMain\apartmentSign.xaml"
             this.SignAdd.Click += new System.Windows.RoutedEventHandler(this.SignAdd_Click);
             
             #line default
@@ -117,7 +117,7 @@ namespace MsInfoSys.currMain {
             case 3:
             this.SignEdit = ((System.Windows.Controls.Button)(target));
             
-            #line 72 "..\..\..\currMain\apartmentSign.xaml"
+            #line 64 "..\..\..\currMain\apartmentSign.xaml"
             this.SignEdit.Click += new System.Windows.RoutedEventHandler(this.SignEdit_Click);
             
             #line default
@@ -126,7 +126,7 @@ namespace MsInfoSys.currMain {
             case 4:
             this.SignDelete = ((System.Windows.Controls.Button)(target));
             
-            #line 79 "..\..\..\currMain\apartmentSign.xaml"
+            #line 71 "..\..\..\currMain\apartmentSign.xaml"
             this.SignDelete.Click += new System.Windows.RoutedEventHandler(this.SignDelete_Click);
             
             #line default

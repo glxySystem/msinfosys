@@ -22,23 +22,15 @@
                 <Label Style="{StaticResource apartmentSignLabel}">学号:</Label>
                 <TextBox Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                    <ComboBoxItem>全部</ComboBoxItem>
-                    <ComboBoxItem>2015级</ComboBoxItem>
-                    <ComboBoxItem>2014级</ComboBoxItem>
-                </ComboBox>
-            </StackPanel>
+                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}"  ItemsSource="{Binding GradeLstSource}" SelectedItem="{Binding GradeLstSelect}"/>
+             </StackPanel>
         </Border>
         <Border Grid.Row="1"
                 BorderBrush="#F2F3F4"
                 BorderThickness="0,0,0,1">
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                    <ComboBoxItem>全部</ComboBoxItem>
-                    <ComboBoxItem>信管</ComboBoxItem>
-                    <ComboBoxItem>管科</ComboBoxItem>
-                </ComboBox>
+                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}" ItemsSource="{Binding MajorLstSource}" SelectedItem="{Binding MajorLstSelect}"/>
                 <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
                 <DatePicker Style="{StaticResource apartmentSignCondition}" />
             </StackPanel>

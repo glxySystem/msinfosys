@@ -41,7 +41,7 @@ namespace MsInfoSys.currMain {
     public partial class apartmentSignEdit : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 52 "..\..\..\currMain\apartmentSignEdit.xaml"
+        #line 44 "..\..\..\currMain\apartmentSignEdit.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button doSignEdit;
         
@@ -49,7 +49,7 @@ namespace MsInfoSys.currMain {
         #line hidden
         
         
-        #line 59 "..\..\..\currMain\apartmentSignEdit.xaml"
+        #line 51 "..\..\..\currMain\apartmentSignEdit.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button doCancel;
         
@@ -89,7 +89,7 @@ namespace MsInfoSys.currMain {
             case 1:
             this.doSignEdit = ((System.Windows.Controls.Button)(target));
             
-            #line 53 "..\..\..\currMain\apartmentSignEdit.xaml"
+            #line 45 "..\..\..\currMain\apartmentSignEdit.xaml"
             this.doSignEdit.Click += new System.Windows.RoutedEventHandler(this.doSignEdit_Click);
             
             #line default
@@ -98,7 +98,7 @@ namespace MsInfoSys.currMain {
             case 2:
             this.doCancel = ((System.Windows.Controls.Button)(target));
             
-            #line 60 "..\..\..\currMain\apartmentSignEdit.xaml"
+            #line 52 "..\..\..\currMain\apartmentSignEdit.xaml"
             this.doCancel.Click += new System.Windows.RoutedEventHandler(this.doCancel_Click);
             
             #line default

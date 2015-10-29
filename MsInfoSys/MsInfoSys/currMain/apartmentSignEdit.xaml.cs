@@ -19,7 +19,7 @@ namespace MsInfoSys.currMain
     /// </summary>
     public partial class apartmentSignEdit : Window
     {
-        public apartmentSign()
+        public void apartmentSign()
         {
             InitializeComponent();
             GradeLstSource = new List<string>() { "全部", "14级", "15级" };

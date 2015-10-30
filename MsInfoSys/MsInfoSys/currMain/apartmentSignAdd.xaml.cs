@@ -30,7 +30,7 @@ namespace MsInfoSys.currMain
             public List<String> MajorLstSource { get; set; }
             public string MajorLstSelect { get; set; }
             /// 构造方法       
-            public void apartmentSign()
+            public apartmentSignAdd()
             {
                 InitializeComponent();
                 GradeLstSource = new List<string>() { "全部" };
@@ -100,14 +100,14 @@ namespace MsInfoSys.currMain
             }
         
             private void doSignAdd_Click(object sender, RoutedEventArgs e)
-        {
-            //添加点到信息操作
-            Close();
-        }
+            {
+                //添加点到信息操作
+                Close();
+            }
 
-        private void doCancel_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
+            private void doCancel_Click(object sender, RoutedEventArgs e)
+            {
+                Close();
+            }
     }
 }

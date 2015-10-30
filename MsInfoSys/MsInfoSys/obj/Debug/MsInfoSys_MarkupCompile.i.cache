@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\
 MsInfoSys
 none
 false
 DEBUG;TRACE
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\App.xaml
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\App.xaml
 141053949777
 1-548548268
-22-1774181111
-191831183525
+22795728973
+19-1178388912
 currMain\apartmentSign.xaml;currMain\apartmentSignAdd.xaml;currMain\apartmentSignEdit.xaml;currMain\undergraduateInfo.xaml;currMain\currContent1_2.xaml;currMain\currContent2.xaml;currTab\apartment.xaml;currTab\index.xaml;currTab\undergraduate.xaml;currTab\graduate.xaml;FrameDictionary.xaml;LoginWindow.xaml;MainWindow.xaml;Resources\Icons.xaml;
 
-False
+True
 

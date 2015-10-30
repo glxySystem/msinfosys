@@ -18,9 +18,9 @@ namespace MsInfoSys.currMain
     /// <summary>
     /// currContent2.xaml 的交互逻辑
     /// </summary>
-    public partial class currContent2 : UserControl
+    public partial class tabGraduate : UserControl
     {
-        public currContent2()
+        public tabGraduate()
         {
             InitializeComponent();
         }

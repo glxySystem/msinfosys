@@ -30,12 +30,8 @@ namespace MsInfoSys.currMain
 
         //早点到，专业下拉表
         public List<String> MajorLstSource { get; set; }
-        public string MajorLstSelect { get; set; }
-
-
-        /// <summary>
-        /// 构造方法
-        /// </summary>
+        public string MajorLstSelect { get; set; }               
+        /// 构造方法       
         public apartmentSign()
         {
             InitializeComponent();
@@ -45,10 +41,7 @@ namespace MsInfoSys.currMain
             MajorLstSource = new List<string>() { "全部" };
             MajorLstSelect = "全部";
             GetMajorName();
-            this.DataContext = this;
-
-           
-            
+            this.DataContext = this;                     
         }
 
         /// <summary>

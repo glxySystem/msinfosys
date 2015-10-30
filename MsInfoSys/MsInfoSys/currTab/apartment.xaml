@@ -22,7 +22,7 @@
                         <Label Style="{StaticResource tabLabel}">早点到</Label>
                     </StackPanel>
                 </Button>
-                <Button Name="apartmentSanitary">
+                <Button Name="apartmentSanitary" Click="apartmentSanitary_Click">
                     <StackPanel Style="{StaticResource tabStack}">
                         <Image Source="../icon/apartmentSanitary.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">卫生检查</Label>

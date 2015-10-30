@@ -29,5 +29,10 @@ namespace MsInfoSys.currTab
         {
             currMain.Content = new currMain.apartmentSign();
         }
+
+        private void apartmentSanitary_Click(object sender, RoutedEventArgs e)
+        {
+            currMain.Content = new currMain.apartmentSign(); 
+        }
     }
 }

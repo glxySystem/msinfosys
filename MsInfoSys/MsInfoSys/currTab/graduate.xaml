@@ -20,7 +20,7 @@
                 <Button Name="tab_butn1">
                     <StackPanel Style="{StaticResource tabStack}">
                         <Image Source="../icon/graduateInfo.png" Style="{StaticResource tabImg}" />
-                        <Label Style="{StaticResource tabLabel}">信息管理</Label>
+                        <Label Style="{StaticResource tabLabel}">基本信息</Label>
                     </StackPanel>
                 </Button>
                 <Button Name="tab_btn2">

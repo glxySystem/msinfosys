@@ -1,97 +1,4 @@
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe.config
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.pdb
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\MySql.Data.dll
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSign.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignAdd.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent2.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currTab\graduate.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MainWindow.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\App.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_MarkupCompile.cache
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_MarkupCompile.lref
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\App.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSign.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignAdd.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent2.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\currTab\graduate.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\FrameDictionary.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MainWindow.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.g.resources
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.Properties.Resources.resources
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csproj.GenerateResource.Cache
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.exe
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.pdb
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\MahApps.Metro.dll
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\System.Windows.Interactivity.dll
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\MahApps.Metro.xml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\Resources\Icons.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\Resources\Icons.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\LoginWindow.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\LoginWindow.baml
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\bin\Debug\Sound\clock.wav
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_Content.g.cs
-C:\Users\Tosev7en\Downloads\MS-master (2)\MS-master\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csprojResolveAssemblyReference.cache
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe.config
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.exe
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.pdb
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe.config
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.exe
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.pdb
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\Sound\clock.wav
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.pdb
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MahApps.Metro.dll
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\System.Windows.Interactivity.dll
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MahApps.Metro.xml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csprojResolveAssemblyReference.cache
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\Resources\Icons.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSign.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignAdd.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent2.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\graduate.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\LoginWindow.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MainWindow.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\Resources\Icons.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\App.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_Content.g.cs
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_MarkupCompile.cache
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_MarkupCompile.lref
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\App.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSign.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignAdd.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent2.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\graduate.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\FrameDictionary.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\LoginWindow.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MainWindow.baml
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.g.resources
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.Properties.Resources.resources
-E:\Users\Rorwey\Documents\学习\科目\WPF学习\Workspace\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csproj.GenerateResource.Cache
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\Sound\clock.wav
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.pdb
@@ -104,8 +11,9 @@ D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSign.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignAdd.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.g.cs
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\indexContent\indexClock.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.g.cs
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.g.cs
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\tabGraduate.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.g.cs
@@ -121,8 +29,9 @@ D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSign.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignAdd.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.baml
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\indexContent\indexClock.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.baml
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.baml
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\tabGraduate.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.baml
@@ -133,58 +42,5 @@ D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.g.resources
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.Properties.Resources.resources
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe.config
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.exe
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.pdb
-F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\Sound\clock.wav
-F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe
-F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.pdb
-F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MahApps.Metro.dll
-F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MySql.Data.dll
-F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\System.Windows.Interactivity.dll
-F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MahApps.Metro.xml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csprojResolveAssemblyReference.cache
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\Resources\Icons.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSign.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignAdd.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\indexContent\indexClock.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent2.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\graduate.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\LoginWindow.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MainWindow.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\Resources\Icons.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\App.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_Content.g.cs
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_MarkupCompile.cache
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys_MarkupCompile.lref
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\App.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSign.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignAdd.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\indexContent\indexClock.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent2.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\graduate.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\FrameDictionary.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\LoginWindow.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MainWindow.baml
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.g.resources
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.Properties.Resources.resources
-F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csproj.GenerateResource.Cache
-=======
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\tabGraduate.g.cs
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\tabGraduate.baml
->>>>>>> bbb8af76d616948672d1cf9219b9acab6c07ec40
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\indexContent\indexClock.g.cs
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\indexContent\indexClock.baml
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.exe
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.pdb

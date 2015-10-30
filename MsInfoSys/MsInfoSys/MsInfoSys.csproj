@@ -100,10 +100,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="currMain\currContent1_2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="currMain\tabGraduate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,9 +141,6 @@
     </Compile>
     <Compile Include="currMain\undergraduateInfo.xaml.cs">
       <DependentUpon>undergraduateInfo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="currMain\currContent1_2.xaml.cs">
-      <DependentUpon>currContent1_2.xaml</DependentUpon>
     </Compile>
     <Compile Include="currMain\tabGraduate.xaml.cs">
       <DependentUpon>tabGraduate.xaml</DependentUpon>

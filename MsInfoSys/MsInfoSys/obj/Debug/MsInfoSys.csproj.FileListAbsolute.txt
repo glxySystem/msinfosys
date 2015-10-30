@@ -186,3 +186,5 @@ F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csproj.GenerateResou
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\tabGraduate.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\tabGraduate.baml
 >>>>>>> bbb8af76d616948672d1cf9219b9acab6c07ec40
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\indexContent\indexClock.g.cs
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\indexContent\indexClock.baml

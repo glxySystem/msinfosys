@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="MsInfoSys.currMain.indexContent.indexClock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MsInfoSys.currMain.indexContent"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Style="{StaticResource indexContentLabel}">
+            闹钟设置
+        </Label>
+        <Label Grid.Row="1" Margin="20,0,0,0" VerticalContentAlignment="Center" FontSize="15">**闹钟采用24时计时法。编辑格式为：x(x):xx:xx，例如：8:00:00,20:15:15。若要删除当前闹铃，清空该行文本即可**</Label>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Label FontSize="16" Margin="12">编辑当前闹钟</Label>
+                <StackPanel Grid.Row="1" Name="clockList" Margin="20,0,0,0">
+                </StackPanel>
+                <Label Name="OpeClock"  Style="{StaticResource opeClock}" MouseDown="OpeClock_MouseDown">确认修改</Label>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Label FontSize="16" Margin="12">新增闹钟</Label>
+                <StackPanel Grid.Row="1" Name="clockAdd" Margin="20,0,0,0">
+                    <TextBox Style="{StaticResource currClock}"></TextBox>
+                </StackPanel>
+                <Label Name="addClock"  Style="{StaticResource opeClock}" MouseDown="addClock_MouseDown">确认增加</Label>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

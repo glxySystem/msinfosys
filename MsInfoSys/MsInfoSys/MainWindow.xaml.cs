@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using Forms = System.Windows.Forms;
 using System.Timers;
 using System.Media;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace MsInfoSys
 {
@@ -48,8 +50,12 @@ namespace MsInfoSys
         //闹钟功能
         protected void clock(object source, ElapsedEventArgs e)
         {
+            //获取闹钟时间
+            string clockText = File.ReadAllText("Text/clock.txt");
             string currTime = DateTime.Now.ToLongTimeString().ToString();
-            if (currTime == "8:00:00" || currTime == "22:30:20")
+            Regex reg = new Regex(currTime);
+            Match m = reg.Match(clockText);
+            if (m.Success)
             {
                 SoundPlayer sp = new SoundPlayer();
                 sp.SoundLocation = @"Sound/clock.wav";

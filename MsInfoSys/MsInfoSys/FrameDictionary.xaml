@@ -117,4 +117,32 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    <Style x:Key="indexContentLabel">
+        <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+        <Setter Property="Control.FontSize" Value="18"></Setter>
+        <Setter Property="Control.Padding" Value="20,0,0,0"></Setter>
+    </Style>
+    <Style x:Key="currClock">
+        <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+        <Setter Property="Control.HorizontalAlignment" Value="Left" />
+        <Setter Property="Control.Width" Value="200"></Setter>
+        <Setter Property="Control.Height" Value="35"></Setter>
+        <Setter Property="Control.Margin" Value="0,6,0,0"></Setter>
+        <Setter Property="Control.FontSize" Value="15"></Setter>
+    </Style>
+    <Style x:Key="opeClock">
+        <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+        <Setter Property="Control.HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Control.HorizontalAlignment" Value="Left" />
+        <Setter Property="Control.Width" Value="100"></Setter>
+        <Setter Property="Control.Height" Value="30"></Setter>
+        <Setter Property="Control.FontSize" Value="15"></Setter>
+        <Setter Property="Control.Margin" Value="20,5,0,0"></Setter>
+        <Setter Property="Control.Background" Value="#f0f0f0" />
+        <Style.Triggers>
+            <Trigger Property="Control.IsMouseOver" Value="True">
+                <Setter Property="Control.Background" Value="#ccc" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

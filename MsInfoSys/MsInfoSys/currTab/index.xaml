@@ -7,199 +7,201 @@
              d:DesignHeight="300"
              d:DesignWidth="300"
              mc:Ignorable="d">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="36*" />
-            <RowDefinition Height="50*" />
-            <RowDefinition Height="13*" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Margin="40,20,40,30">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*" />
-                <ColumnDefinition Width="4*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0">
-                <StackPanel.Background>
-                    <ImageBrush ImageSource="../icon/index/note.png" />
-                </StackPanel.Background>
-            </StackPanel>
-            <TextBlock Grid.Column="1"
+    <ContentControl Name="indexContent">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="36*" />
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="13*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="40,20,40,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="../icon/index/note.png" />
+                    </StackPanel.Background>
+                </StackPanel>
+                <TextBlock Grid.Column="1"
                        FontSize="14"
                        LineHeight="50"
                        Padding="20"
                        TextWrapping="Wrap">
-                <TextBlock.Background>
-                    <ImageBrush ImageSource="../icon/index/noteshow.png" />
-                </TextBlock.Background>
-            </TextBlock>
-            <StackPanel Grid.Column="2">
-                <StackPanel.Background>
-                    <ImageBrush ImageSource="../icon/index/noteadd.png" />
-                </StackPanel.Background>
-            </StackPanel>
-        </Grid>
-        <Grid Grid.Row="1" Margin="40,0,40,0">
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Border Name="indeximg1"
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="../icon/index/noteshow.png" />
+                    </TextBlock.Background>
+                </TextBlock>
+                <StackPanel Grid.Column="2">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="../icon/index/noteadd.png" />
+                    </StackPanel.Background>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Margin="40,0,40,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Border Name="indeximg1"
                     Grid.Row="0"
                     Grid.Column="0"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg1.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg2"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg1.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg2"
                     Grid.Row="0"
                     Grid.Column="1"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg2.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg3"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg2.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg3"
                     Grid.Row="0"
                     Grid.Column="2"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg3.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg4"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg3.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg4"
                     Grid.Row="0"
                     Grid.Column="4"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg4.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg5"
+                    <StackPanel  Name="indexClock" MouseDown="indexClock_MouseDown">
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg4.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg5"
                     Grid.Row="0"
                     Grid.Column="5"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg5.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg6"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg5.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg6"
                     Grid.Row="1"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg6.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg7"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg6.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg7"
                     Grid.Row="1"
                     Grid.Column="2"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg7.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg8"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg7.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg8"
                     Grid.Row="1"
                     Grid.Column="3"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg8.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg9"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg8.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg9"
                     Grid.Row="1"
                     Grid.Column="4"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg9.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg10"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg9.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg10"
                     Grid.Row="2"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg10.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg11"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg10.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg11"
                     Grid.Row="2"
                     Grid.Column="2"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg11.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg12"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg11.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg12"
                     Grid.Row="2"
                     Grid.Column="4"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg12.png" />
-                    </StackPanel.Background>
-                </StackPanel>
-            </Border>
-            <Border Name="indeximg13"
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg12.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+                <Border Name="indeximg13"
                     Grid.Row="2"
                     Grid.Column="5"
                     Style="{StaticResource indexBorder}">
-                <StackPanel>
+                    <StackPanel>
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="../icon/index/indeximg13.png" />
+                        </StackPanel.Background>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="2" Margin="40,0,40,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Background="#F0EFF4" />
+                <StackPanel Grid.Row="1">
                     <StackPanel.Background>
-                        <ImageBrush ImageSource="../icon/index/indeximg13.png" />
+                        <ImageBrush ImageSource="../icon/index/indexbottom.png" />
                     </StackPanel.Background>
                 </StackPanel>
-            </Border>
+            </Grid>
         </Grid>
-        <Grid Grid.Row="2" Margin="40,0,40,20">
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Background="#F0EFF4" />
-            <StackPanel Grid.Row="1">
-                <StackPanel.Background>
-                    <ImageBrush ImageSource="../icon/index/indexbottom.png" />
-                </StackPanel.Background>
-            </StackPanel>
-        </Grid>
-    </Grid>
+    </ContentControl>
 </UserControl>

@@ -24,15 +24,9 @@ namespace MsInfoSys.currTab
         {
             InitializeComponent();
         }
-
-        private void indeximg1_MouseEnter(object sender, MouseEventArgs e)
+        private void indexClock_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            indeximg1.BorderBrush = new SolidColorBrush(Color.FromRgb(43, 150, 221));
-        }
-
-        private void indeximg1_MouseLeave(object sender, MouseEventArgs e)
-        {
-            indeximg1.BorderBrush = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            indexContent.Content = new currMain.indexContent.indexClock();
         }
     }
 }

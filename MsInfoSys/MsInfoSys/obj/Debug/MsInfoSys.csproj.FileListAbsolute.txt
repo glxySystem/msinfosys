@@ -106,7 +106,6 @@ D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.g.cs
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent2.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.g.cs
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.g.cs
@@ -124,7 +123,6 @@ D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\apartmentSignEdit.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\undergraduateInfo.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent1_2.baml
-D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\currContent2.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\apartment.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\index.baml
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currTab\undergraduate.baml
@@ -135,6 +133,7 @@ D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.g.resources
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.Properties.Resources.resources
 D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 F:\github\msinfosys\MsInfoSys\MsInfoSys\bin\Debug\MsInfoSys.exe.config
 F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.exe
 F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.pdb
@@ -183,3 +182,7 @@ F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MainWindow.baml
 F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.g.resources
 F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.Properties.Resources.resources
 F:\github\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\MsInfoSys.csproj.GenerateResource.Cache
+=======
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\tabGraduate.g.cs
+D:\我的项目\管理学院信息服务系统\msinfosys\MsInfoSys\MsInfoSys\obj\Debug\currMain\tabGraduate.baml
+>>>>>>> bbb8af76d616948672d1cf9219b9acab6c07ec40

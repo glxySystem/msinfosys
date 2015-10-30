@@ -27,7 +27,7 @@ namespace MsInfoSys.currTab
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            currMain.Content = new currMain.currContent2();
+            currMain.Content = new currMain.tabGraduate();
         }
     }
 }

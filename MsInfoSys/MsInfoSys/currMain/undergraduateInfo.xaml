@@ -7,12 +7,42 @@
              mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
             <RowDefinition Height="*" />
+
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+                BorderBrush="#F2F3F4"
+                BorderThickness="0,0,0,1">
+            <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
+                <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
+                <ComboBox ItemsSource="{Binding GradeLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding GradeLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
+                <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
+                <ComboBox ItemsSource="{Binding MajorLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding MajorLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
+                <!--<Label Style="{StaticResource apartmentSignLabel}">起始:</Label>
+                <DatePicker Style="{StaticResource apartmentSignCondition}" />
+                <Label Style="{StaticResource apartmentSignLabel}">结束:</Label>
+                <DatePicker Style="{StaticResource apartmentSignCondition}" />-->
+                <Border Width="60"
+                        Height="24"
+                        Margin="10,0,0,0"
+                        Background="#2C97DF">
+                    <Button FontSize="14" Foreground="White">查看</Button>
+                </Border>
+            </StackPanel>
+        </Border>
+
         <DataGrid Name="dataGrid1"
-                  Grid.Row="0"
-                  Grid.Column="0"
+                  Grid.Row="1"
+                  Grid.Column="1"
                   AlternatingRowBackground="#efefef"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
@@ -25,7 +55,7 @@
                 <DataGridTextColumn Width="200" Header="地址" />
             </DataGrid.Columns>
         </DataGrid>
-        <ToolBar Grid.Row="1">
+        <ToolBar Grid.Row="2">
             <Button Name="btnAdd" Content="添加" />
             <Button Name="btnEdit" Content="编辑" />
             <Button Name="btnDelete" Content="删除" />

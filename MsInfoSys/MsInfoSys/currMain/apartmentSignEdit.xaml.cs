@@ -29,7 +29,7 @@ namespace MsInfoSys.currMain
         public List<String> MajorLstSource { get; set; }
         public string MajorLstSelect { get; set; }
         /// 构造方法       
-        public void apartmentSign()
+        public  apartmentSignEdit()
         {
             InitializeComponent();
             GradeLstSource = new List<string>() { "全部" };

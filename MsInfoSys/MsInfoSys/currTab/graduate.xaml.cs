@@ -29,5 +29,17 @@ namespace MsInfoSys.currTab
         {
             currMain.Content = new currMain.tabGraduate();
         }
+        //加载毕业生信息模块
+        private void graduateInfoStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            graduateInfoStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            graduateDevelopmentStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
+        //加载毕业生去向模块
+        private void graduateDevelopmentStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            graduateDevelopmentStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            graduateInfoStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
     }
 }

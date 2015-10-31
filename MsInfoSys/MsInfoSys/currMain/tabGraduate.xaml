@@ -21,19 +21,9 @@
                     BorderThickness="0,0,0,1">
                 <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
                     <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                    <ComboBox ItemsSource="{Binding GradeLstSource}"
-                              SelectedIndex="0"
-                              SelectedItem="{Binding GradeLstSelect}"
-                              Style="{StaticResource apartmentSignCondition}" />
+                    <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}"  ItemsSource="{Binding GradeLstSource}" SelectedItem="{Binding GradeLstSelect}"/>
                     <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                    <ComboBox ItemsSource="{Binding MajorLstSource}"
-                              SelectedIndex="0"
-                              SelectedItem="{Binding MajorLstSelect}"
-                              Style="{StaticResource apartmentSignCondition}" />
-                    <!--<Label Style="{StaticResource apartmentSignLabel}">起始:</Label>
-                <DatePicker Style="{StaticResource apartmentSignCondition}" />
-                <Label Style="{StaticResource apartmentSignLabel}">结束:</Label>
-                <DatePicker Style="{StaticResource apartmentSignCondition}" />-->
+                    <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}" ItemsSource="{Binding MajorLstSource}" SelectedItem="{Binding MajorLstSelect}"/>
                     <Border Width="60"
                             Height="24"
                             Margin="10,0,0,0"

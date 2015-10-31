@@ -79,7 +79,7 @@ namespace MsInfoSys.currMain
         private  void GetGrade()
         {
             /// 构造查询字符串
-            string sql = "select class_name  from class";
+            string sql = "select grade_name  from grade";
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 

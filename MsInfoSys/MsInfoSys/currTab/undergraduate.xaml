@@ -15,26 +15,26 @@
                 BorderThickness="0,0,0,1"
                 Padding="0,0,0,2">
             <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Button Name="tab_butn1">
-                    <StackPanel Style="{StaticResource tabStack}">
+                <Button>
+                    <StackPanel Name="undergraduateInfoStack" Style="{StaticResource tabStack}" MouseDown="undergraduateInfoStack_MouseDown">
                         <Image Source="../icon/undergraduateInfo.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">基本信息</Label>
                     </StackPanel>
                 </Button>
-                <Button Name="tab_btn2">
-                    <StackPanel Style="{StaticResource tabStack}">
+                <Button>
+                    <StackPanel Name="undergraduateGradeStack" Style="{StaticResource tabStack}" MouseDown="undergraduateGradeStack_MouseDown">
                         <Image Source="../icon/undergraduateGrade.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">成绩管理</Label>
                     </StackPanel>
                 </Button>
                 <Button>
-                    <StackPanel Style="{StaticResource tabStack}">
+                    <StackPanel Name="undergraduateTestStack" Style="{StaticResource tabStack}" MouseDown="undergraduateTestStack_MouseDown">
                         <Image Source="../icon/undergraduateTest.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">补缓考管理</Label>
                     </StackPanel>
                 </Button>
                 <Button>
-                    <StackPanel Style="{StaticResource tabStack}">
+                    <StackPanel Name="undergraduateRewardStack" Style="{StaticResource tabStack}" MouseDown="undergraduateRewardStack_MouseDown">
                         <Image Source="../icon/undergraduateReward.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">奖惩管理</Label>
                     </StackPanel>

@@ -29,6 +29,37 @@ namespace MsInfoSys.currTab
         {
             currMain.Content = new currMain.undergraduateInfo();
         }
-        
+        //加载在校生基本信息模块
+        private void undergraduateInfoStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            undergraduateInfoStack.Background = new SolidColorBrush(Color.FromRgb(242,242,242));
+            undergraduateGradeStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            undergraduateTestStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            undergraduateRewardStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
+        //加载在校生成绩管理模块
+        private void undergraduateGradeStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            undergraduateGradeStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            undergraduateInfoStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            undergraduateTestStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            undergraduateRewardStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
+        //加载在校生补缓考信息模块
+        private void undergraduateTestStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            undergraduateTestStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            undergraduateInfoStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            undergraduateGradeStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            undergraduateRewardStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
+        //加载在校生奖惩管理模块
+        private void undergraduateRewardStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            undergraduateRewardStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            undergraduateInfoStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            undergraduateGradeStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            undergraduateTestStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
     }
 }

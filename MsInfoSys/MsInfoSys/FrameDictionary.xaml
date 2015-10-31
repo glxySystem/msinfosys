@@ -65,7 +65,8 @@
         </Style.Setters>
     </Style>
     <Style x:Key="tabStack">
-        <Setter Property="Panel.Margin" Value="18,2,18,0"></Setter>
+        <Setter Property="Panel.Margin" Value="18,2,0,0"></Setter>
+        <Setter Property="Panel.Width" Value="80"></Setter>
         <Style.Triggers>
             <Trigger Property="Control.IsMouseOver" Value="True">
                 <Setter Property="Control.Background" Value="#f2f2f2"></Setter>

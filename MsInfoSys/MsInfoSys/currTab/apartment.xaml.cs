@@ -34,5 +34,26 @@ namespace MsInfoSys.currTab
         {
             currMain.Content = new currMain.apartmentSign(); 
         }
+        //加载早点到模块
+        private void apartmentSignStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            apartmentSignStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            apartmentSanitaryStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            apartmentCheckStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
+        //加载卫生检查模块
+        private void apartmentSanitaryStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            apartmentSanitaryStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            apartmentSignStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            apartmentCheckStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
+        //加载晚查寝模块
+        private void apartmentCheckStack_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            apartmentCheckStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            apartmentSignStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            apartmentSanitaryStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        }
     }
 }

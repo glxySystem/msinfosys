@@ -65,10 +65,16 @@
         </Style.Setters>
     </Style>
     <Style x:Key="tabStack">
-        <Setter Property="Panel.Margin" Value="18,6,18,0" />
+        <Setter Property="Panel.Margin" Value="18,2,18,0"></Setter>
+        <Style.Triggers>
+            <Trigger Property="Control.IsMouseOver" Value="True">
+                <Setter Property="Control.Background" Value="#f2f2f2"></Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
     <Style x:Key="tabImg">
         <Setter Property="Image.Width" Value="30" />
+        <Setter Property="Image.Margin" Value="0,4,0,0"></Setter>
     </Style>
     <Style x:Key="tabLabel">
         <Setter Property="Control.HorizontalContentAlignment" Value="Center" />

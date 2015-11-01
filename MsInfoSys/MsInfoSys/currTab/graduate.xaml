@@ -18,13 +18,17 @@
                 Padding="0,0,0,2">
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <Button Name="tab_butn1">
-                    <StackPanel Name="graduateInfoStack" Style="{StaticResource tabStack}" MouseDown="graduateInfoStack_MouseDown">
+                    <StackPanel Name="graduateInfoStack"
+                                MouseDown="graduateInfoStack_MouseDown"
+                                Style="{StaticResource tabStack}">
                         <Image Source="../icon/graduateInfo.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">基本信息</Label>
                     </StackPanel>
                 </Button>
                 <Button Name="tab_btn2">
-                    <StackPanel Name="graduateDevelopmentStack" Style="{StaticResource tabStack}" MouseDown="graduateDevelopmentStack_MouseDown">
+                    <StackPanel Name="graduateDevelopmentStack"
+                                MouseDown="graduateDevelopmentStack_MouseDown"
+                                Style="{StaticResource tabStack}">
                         <Image Source="../icon/graduateDevelopment.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">毕业去向</Label>
                     </StackPanel>

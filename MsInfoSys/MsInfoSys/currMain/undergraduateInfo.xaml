@@ -5,6 +5,20 @@
              xmlns:local="clr-namespace:MsInfoSys.currMain"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d">
+
+    <!--<UserControl.Resources>
+    -->
+    <!--  create an instance of our DataProvider class  -->
+    <!--
+        <ObjectDataProvider x:Key="StudentDataProvider" ObjectType="{x:Type local:StudentDataProvider}" />
+    -->
+    <!--  define the method which is invoked to obtain our data  -->
+    <!--
+        <ObjectDataProvider x:Key="Students"
+                            MethodName="GetStudents"
+                            ObjectInstance="{StaticResource StudentDataProvider}" />
+    </UserControl.Resources>-->
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
@@ -18,9 +32,15 @@
                 BorderThickness="0,0,0,1">
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}"  ItemsSource="{Binding GradeLstSource}" SelectedItem="{Binding GradeLstSelect}"/>
+                <ComboBox ItemsSource="{Binding GradeLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding GradeLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}" ItemsSource="{Binding MajorLstSource}" SelectedItem="{Binding MajorLstSelect}"/>
+                <ComboBox ItemsSource="{Binding MajorLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding MajorLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Border Width="60"
                         Height="24"
                         Margin="10,0,0,0"
@@ -30,19 +50,47 @@
             </StackPanel>
         </Border>
 
-        <DataGrid Name="dataGrid1"
+        <DataGrid Name="StuInfodataGrid"
                   Grid.Row="1"
                   Grid.Column="1"
                   AlternatingRowBackground="#efefef"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
+                  IsReadOnly="True"
+                  ItemsSource="{Binding}"
                   Padding="0,5,0,5"
                   RowBackground="White"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="500" Header="编号" />
-                <DataGridTextColumn Width="300" Header="姓名" />
-                <DataGridTextColumn Width="200" Header="地址" />
+                <DataGridTextColumn Header="院系" />
+                <DataGridTextColumn Header="班级" />
+                <DataGridTextColumn Header="学号" />
+                <DataGridTextColumn Header="姓名" />
+                <DataGridTextColumn Header="性别" />
+                <DataGridTextColumn Header="出生日期" />
+                <DataGridTextColumn Header="民族" />
+                <DataGridTextColumn Header="出生地" />
+                <DataGridTextColumn Header="籍贯" />
+                <DataGridTextColumn Header="身份证号" />
+                <DataGridTextColumn Header="考生号" />
+                <DataGridTextColumn Header="入学日期" />
+
+                <DataGridTextColumn Width="80"
+                                    Binding="{Binding Name}"
+                                    Header="Name" />
+                <DataGridTextColumn Width="50"
+                                    Binding="{Binding Age}"
+                                    Header="Age" />
+                <!--<DataGridComboBoxColumn Width="80"
+                                        Header="Sex"
+                                        ItemsSource="{Binding Source={StaticResource sexEnum}}"
+                                        SelectedItemBinding="{Binding Sex}" />-->
+                <DataGridCheckBoxColumn Width="100"
+                                        Binding="{Binding Pass}"
+                                        Header="Pass Exam?" />
+                <DataGridHyperlinkColumn Width="150"
+                                         Binding="{Binding Email}"
+                                         Header="Email" />
             </DataGrid.Columns>
         </DataGrid>
         <ToolBar Grid.Row="2">

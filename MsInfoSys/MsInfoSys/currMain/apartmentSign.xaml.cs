@@ -49,15 +49,37 @@ namespace MsInfoSys.currMain
         /// </summary>
         private void GetMajorName()
         {
-            /// 构造查询字符串
-            string sql = "select major_name  from major";
 
-            MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
+            ///
+            /// 老方法
+            ///
 
-            /// 设置XXX
-            DataSet ds = new DataSet();
 
-            mda.Fill(ds, "MajorName");
+            //构造查询字符串
+
+            //string sql = "select major_name  from major";
+
+            //MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
+
+            //设置XXX
+
+            //DataSet ds = new DataSet();
+
+            //mda.Fill(ds, "MajorName");
+
+
+            //DataView dv = new DataView();
+            //dv = ds.Tables["student"].DefaultView;
+            //MessageBox.Show(dv.ToString());
+
+
+            ///
+            /// 新方法
+            ///
+            StudentDataProvider sdp = new StudentDataProvider("select major_name  from major", "MajorName");
+
+            DataSet ds = sdp.GetStudents();
+
 
             if (ds.Tables["MajorName"].Rows.Count > 0)
             {

@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,49 @@ namespace MsInfoSys.currMain
             MajorLstSelect = "全部";
             GetMajorName();
             this.DataContext = this;
+
+
+            StudentDataProvider sdp = new StudentDataProvider("select * from student","Student");
+            DataSet ds = sdp.GetStudents();
+
+            ObservableCollection<Member> memberData = new ObservableCollection<Member>();
+            memberData.Add(new Member()
+            {
+                Name = "Joe",
+                Age = "23",
+                Sex = SexOpt.Male,
+                Pass = true,
+                Email = new Uri("mailto:Joe@school.com")
+            });
+            memberData.Add(new Member()
+            {
+                Name = "Mike",
+                Age = "20",
+                Sex = SexOpt.Male,
+                Pass = false,
+                Email = new Uri("mailto:Mike@school.com")
+            });
+            memberData.Add(new Member()
+            {
+                Name = "Lucy",
+                Age = "25",
+                Sex = SexOpt.Female,
+                Pass = true,
+                Email = new Uri("mailto:Lucy@school.com")
+            });
+            StuInfodataGrid.DataContext = memberData;
+        }
+
+
+        public enum SexOpt { Male, Female };
+
+        public class Member
+        {
+            public string Name { get; set; }
+            public string Age { get; set; }
+            public SexOpt Sex { get; set; }
+            public bool Pass { get; set; }
+            public Uri Email { get; set; }
         }
 
         /// <summary>
@@ -48,15 +92,19 @@ namespace MsInfoSys.currMain
         /// </summary>
         private void GetMajorName()
         {
-            /// 构造查询字符串
-            string sql = "select major_name  from major";
+            ///// 构造查询字符串
+            //string sql = "select major_name  from major";
 
-            MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
+            //MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
-            /// 设置XXX
-            DataSet ds = new DataSet();
+            ///// 设置XXX
+            //DataSet ds = new DataSet();
 
-            mda.Fill(ds, "MajorName");
+            //mda.Fill(ds, "MajorName");
+
+            StudentDataProvider sdp = new StudentDataProvider("select major_name  from major", "MajorName");
+
+            DataSet ds = sdp.GetStudents();
 
             if (ds.Tables["MajorName"].Rows.Count > 0)
             {

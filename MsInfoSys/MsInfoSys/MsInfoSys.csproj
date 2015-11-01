@@ -125,6 +125,7 @@
     <Compile Include="currMain\apartmentSignEdit.xaml.cs">
       <DependentUpon>apartmentSignEdit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="currMain\StudentDataProvider.cs" />
     <Page Include="currMain\apartmentSign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

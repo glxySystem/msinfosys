@@ -62,35 +62,37 @@
                   RowBackground="White"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="院系" />
-                <DataGridTextColumn Header="班级" />
-                <DataGridTextColumn Header="学号" />
-                <DataGridTextColumn Header="姓名" />
-                <DataGridTextColumn Header="性别" />
-                <DataGridTextColumn Header="出生日期" />
-                <DataGridTextColumn Header="民族" />
-                <DataGridTextColumn Header="出生地" />
-                <DataGridTextColumn Header="籍贯" />
-                <DataGridTextColumn Header="身份证号" />
-                <DataGridTextColumn Header="考生号" />
-                <DataGridTextColumn Header="入学日期" />
+                <DataGridTextColumn Binding="{Binding Path=school_name}" Header="院系" />
+                <DataGridTextColumn Binding="{Binding Path=class_name}" Header="班级" />
+                <DataGridTextColumn Binding="{Binding Path=stu_num}" Header="学号" />
+                <DataGridTextColumn Binding="{Binding Path=stu_name}" Header="姓名" />
+                <DataGridTextColumn Binding="{Binding Path=sex}" Header="性别" />
+                <DataGridTextColumn Binding="{Binding Path=birth_date}" Header="出生日期" />
+                <DataGridTextColumn Binding="{Binding Path=nationality}" Header="民族" />
+                <DataGridTextColumn Binding="{Binding Path=birth_place}" Header="出生地" />
+                <DataGridTextColumn Binding="{Binding Path=native_place}" Header="籍贯" />
+                <DataGridTextColumn Binding="{Binding Path=idcard_number}" Header="身份证号" />
+                <DataGridTextColumn Binding="{Binding Path=exam_number}" Header="考生号" />
+                <DataGridTextColumn Binding="{Binding Path=enrollment_date}" Header="入学日期" />
 
-                <DataGridTextColumn Width="80"
+                <!--<DataGridTextColumn Width="80"
                                     Binding="{Binding Name}"
                                     Header="Name" />
                 <DataGridTextColumn Width="50"
                                     Binding="{Binding Age}"
                                     Header="Age" />
+                -->
                 <!--<DataGridComboBoxColumn Width="80"
                                         Header="Sex"
                                         ItemsSource="{Binding Source={StaticResource sexEnum}}"
                                         SelectedItemBinding="{Binding Sex}" />-->
+                <!--
                 <DataGridCheckBoxColumn Width="100"
                                         Binding="{Binding Pass}"
                                         Header="Pass Exam?" />
                 <DataGridHyperlinkColumn Width="150"
                                          Binding="{Binding Email}"
-                                         Header="Email" />
+                                         Header="Email" />-->
             </DataGrid.Columns>
         </DataGrid>
         <ToolBar Grid.Row="2">

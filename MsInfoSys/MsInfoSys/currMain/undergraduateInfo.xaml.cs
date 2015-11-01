@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,9 @@ namespace MsInfoSys.currMain
         //早点到，专业下拉表
         public List<String> MajorLstSource { get; set; }
         public string MajorLstSelect { get; set; }
+
+        public List<String> memberData { get; set; }
+
         /// 构造方法       
         public undergraduateInfo()
         {
@@ -44,48 +48,78 @@ namespace MsInfoSys.currMain
             this.DataContext = this;
 
 
-            StudentDataProvider sdp = new StudentDataProvider("select * from student","Student");
-            DataSet ds = sdp.GetRawData();
+            //StudentDataProvider sdp = new StudentDataProvider("select * from student","Student");
+            //DataSet ds = sdp.GetRawData();
 
-            ObservableCollection<Member> memberData = new ObservableCollection<Member>();
-            memberData.Add(new Member()
-            {
-                Name = "Joe",
-                Age = "23",
-                Sex = SexOpt.Male,
-                Pass = true,
-                Email = new Uri("mailto:Joe@school.com")
-            });
-            memberData.Add(new Member()
-            {
-                Name = "Mike",
-                Age = "20",
-                Sex = SexOpt.Male,
-                Pass = false,
-                Email = new Uri("mailto:Mike@school.com")
-            });
-            memberData.Add(new Member()
-            {
-                Name = "Lucy",
-                Age = "25",
-                Sex = SexOpt.Female,
-                Pass = true,
-                Email = new Uri("mailto:Lucy@school.com")
-            });
-            StuInfodataGrid.DataContext = memberData;
+
+            //string MySQLStr = ConfigurationManager.ConnectionStrings["MySqlConn"].ConnectionString;
+            //MySqlConnection conn = new MySqlConnection(MySQLStr);
+            //if (conn != null)
+            //{
+                MySqlDataAdapter mda = new MySqlDataAdapter("select * from student", DBHelper.conn);
+                //MessageBox.Show(mda);
+                DataTable dt = new DataTable();
+                mda.AcceptChangesDuringUpdate = true;
+                mda.Fill(dt);
+                StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
+               /// MessageBox.Show("打开数据库成功" + mda);
+            //}
+
+            //StuInfodataGrid.ItemsSource = null;
+            //memberData = new List<String>();
+            //if (ds.Tables["Student"].Rows.Count > 0)
+            //{
+            //    foreach (DataRow row in ds.Tables[0].Rows)
+            //    {
+            //        //Console.WriteLine(row[0].ToString());
+            //        //MajorLstSource.Add(row[0].ToString());
+            //        memberData.Add(row[0].ToString());
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("数据表为空！");
+            //}
+
+
+            //memberData.Add(new Member()
+            //{
+            //    Name = "Joe",
+            //    Age = "23",
+            //    Sex = SexOpt.Male,
+            //    Pass = true,
+            //    Email = new Uri("mailto:Joe@school.com")
+            //});
+            //memberData.Add(new Member()
+            //{
+            //    Name = "Mike",
+            //    Age = "20",
+            //    Sex = SexOpt.Male,
+            //    Pass = false,
+            //    Email = new Uri("mailto:Mike@school.com")
+            //});
+            //memberData.Add(new Member()
+            //{
+            //    Name = "Lucy",
+            //    Age = "25",
+            //    Sex = SexOpt.Female,
+            //    Pass = true,
+            //    Email = new Uri("mailto:Lucy@school.com")
+            //});
+            //StuInfodataGrid.DataContext = memberData;
         }
 
 
-        public enum SexOpt { Male, Female };
+        //public enum SexOpt { Male, Female };
 
-        public class Member
-        {
-            public string Name { get; set; }
-            public string Age { get; set; }
-            public SexOpt Sex { get; set; }
-            public bool Pass { get; set; }
-            public Uri Email { get; set; }
-        }
+        //public class Member
+        //{
+        //    public string Name { get; set; }
+        //    public string Age { get; set; }
+        //    public SexOpt Sex { get; set; }
+        //    public bool Pass { get; set; }
+        //    public Uri Email { get; set; }
+        //}
 
         /// <summary>
         /// 查询字符串：

@@ -23,7 +23,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="*" />
-
+            <RowDefinition Height="50" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
@@ -95,7 +95,28 @@
                                          Header="Email" />-->
             </DataGrid.Columns>
         </DataGrid>
-        <ToolBar Grid.Row="2">
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Margin="5" Text="转到" />
+            <TextBox Name="tbxPageNum" Text="" />
+            <TextBlock Text="页" />
+            <Button Content="GO" />
+            <Button Name="btnUp"
+                    VerticalAlignment="Center"
+                    Content="上一页" />
+            <Button Name="btnNext"
+                    VerticalAlignment="Center"
+                    Content="下一页" />
+            <TextBlock Height="20">
+                <TextBlock Text="【共" />
+                <TextBlock Name="tbkTotal" Foreground="Red" />
+                <TextBlock Text="页】" />
+                <TextBlock Text="【当前" />
+                <TextBlock Name="tbkCurrentsize" Foreground="Red" />
+                <TextBlock Text="页】" />
+            </TextBlock>
+        </StackPanel>
+        <ToolBar Grid.Row="3">
             <Button Name="btnAdd" Content="添加" />
             <Button Name="btnEdit" Content="编辑" />
             <Button Name="btnDelete" Content="删除" />

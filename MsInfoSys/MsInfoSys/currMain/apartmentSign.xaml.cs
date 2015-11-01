@@ -132,7 +132,9 @@ namespace MsInfoSys.currMain
         //sql语句是正常的，有一条返回值
         private void Show_Click(object sender, RoutedEventArgs e)
         {
-            new apartmentSign().Show();
+            DataTable dt = Show();
+
+            apartmentSignTable.ItemsSource = dt.DefaultView;//数据才会显示
 
         }
         
@@ -141,7 +143,7 @@ namespace MsInfoSys.currMain
             DataTable dt = new DataTable();
             try
             {
-                string sql1 = "select stu_number,stu_name,major_name,class_name,ban_num,,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
+                string sql1 = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql1, DBHelper.MySQLStr);
                 DataSet ds = new DataSet();
                 mda.Fill(ds, "Show");

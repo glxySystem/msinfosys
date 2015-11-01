@@ -18,9 +18,15 @@
                 BorderThickness="0,0,0,1">
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}"  ItemsSource="{Binding GradeLstSource}" SelectedItem="{Binding GradeLstSelect}"/>
+                <ComboBox ItemsSource="{Binding GradeLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding GradeLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}" ItemsSource="{Binding MajorLstSource}" SelectedItem="{Binding MajorLstSelect}"/>
+                <ComboBox ItemsSource="{Binding MajorLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding MajorLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">起始:</Label>
                 <DatePicker Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">结束:</Label>
@@ -29,7 +35,11 @@
                         Height="24"
                         Margin="10,0,0,0"
                         Background="#2C97DF">
-                    <Button FontSize="14" Foreground="White">查看</Button>
+                    <Button Click="Show_Click"
+                            FontSize="14"
+                            Foreground="White">
+                        查看
+                    </Button>
                 </Border>
             </StackPanel>
         </Border>
@@ -42,12 +52,12 @@
                   RowBackground="White"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="学号" Binding="{Binding stu_number}"/>
-                <DataGridTextColumn Header="姓名" Binding="{Binding stu_name}"/>
-                <DataGridTextColumn Header="专业" Binding="{Binding major_name}"/>
-                <DataGridTextColumn Header="班级" Binding="{Binding class_name}"/>
-                <DataGridTextColumn Header="楼栋" Binding="{Binding ban_num}"/>
-                <DataGridTextColumn Header="寝室" Binding="{Binding dor_num}"/>
+                <DataGridTextColumn Binding="{Binding Path=stu_number}" Header="学号" />
+                <DataGridTextColumn Binding="{Binding Path=stu_name}" Header="姓名" />
+                <DataGridTextColumn Binding="{Binding Path=major_name}" Header="专业" />
+                <DataGridTextColumn Binding="{Binding Path=class_name}" Header="班级" />
+                <DataGridTextColumn Binding="{Binding Path=ban_num}" Header="楼栋" />
+                <DataGridTextColumn Binding="{Binding Path=dor_num}" Header="寝室" />
             </DataGrid.Columns>
         </DataGrid>
         <Border Grid.Row="2"

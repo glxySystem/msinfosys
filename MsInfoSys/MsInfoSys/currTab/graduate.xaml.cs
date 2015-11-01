@@ -34,6 +34,8 @@ namespace MsInfoSys.currTab
         {
             graduateInfoStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
             graduateDevelopmentStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+
+            currMain.Content = new currMain.tabGraduateInfo();
         }
         //加载毕业生去向模块
         private void graduateDevelopmentStack_MouseDown(object sender, MouseButtonEventArgs e)

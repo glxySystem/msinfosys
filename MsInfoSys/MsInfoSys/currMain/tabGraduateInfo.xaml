@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="MsInfoSys.currMain.tabGraduate"
+﻿<UserControl x:Class="MsInfoSys.currMain.tabGraduateInfo"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -20,7 +20,7 @@
                     BorderBrush="#F2F3F4"
                     BorderThickness="0,0,0,1">
                 <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
-                    <Label Style="{StaticResource apartmentSignLabel}">tab年级:</Label>
+                    <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
                     <ComboBox ItemsSource="{Binding GradeLstSource}"
                               SelectedIndex="0"
                               SelectedItem="{Binding GradeLstSelect}"

@@ -142,6 +142,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="currMain\tabGraduateInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="currMain\undergraduateInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +188,9 @@
     </Compile>
     <Compile Include="currMain\indexContent\indexClock.xaml.cs">
       <DependentUpon>indexClock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currMain\tabGraduateInfo.xaml.cs">
+      <DependentUpon>tabGraduateInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="currMain\undergraduateInfo.xaml.cs">
       <DependentUpon>undergraduateInfo.xaml</DependentUpon>

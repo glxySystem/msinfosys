@@ -158,7 +158,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="currTab\DecisionSupportSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currTab\EvaluationForStuquality.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="currTab\index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currTab\SchoolFiles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -201,8 +213,17 @@
     <Compile Include="currTab\apartment.xaml.cs">
       <DependentUpon>apartment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="currTab\DecisionSupportSystem.xaml.cs">
+      <DependentUpon>DecisionSupportSystem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currTab\EvaluationForStuquality.xaml.cs">
+      <DependentUpon>EvaluationForStuquality.xaml</DependentUpon>
+    </Compile>
     <Compile Include="currTab\index.xaml.cs">
       <DependentUpon>index.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="currTab\SchoolFiles.xaml.cs">
+      <DependentUpon>SchoolFiles.xaml</DependentUpon>
     </Compile>
     <Compile Include="currTab\undergraduate.xaml.cs">
       <DependentUpon>undergraduate.xaml</DependentUpon>

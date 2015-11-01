@@ -128,7 +128,8 @@ namespace MsInfoSys.currMain
             }
         }
 
-
+        //点击这个按钮没反应，求解决
+        //sql语句是正常的，有一条返回值
         private void Show_Click(object sender, RoutedEventArgs e)
         {
             new apartmentSign().Show();

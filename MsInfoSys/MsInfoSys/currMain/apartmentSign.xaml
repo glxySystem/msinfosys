@@ -42,9 +42,12 @@
                   RowBackground="White"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="编号" />
-                <DataGridTextColumn Header="姓名" />
-                <DataGridTextColumn Header="地址" />
+                <DataGridTextColumn Header="学号" Binding="{Binding stu_number}"/>
+                <DataGridTextColumn Header="姓名" Binding="{Binding stu_name}"/>
+                <DataGridTextColumn Header="专业" Binding="{Binding major_name}"/>
+                <DataGridTextColumn Header="班级" Binding="{Binding class_name}"/>
+                <DataGridTextColumn Header="楼栋" Binding="{Binding ban_num}"/>
+                <DataGridTextColumn Header="寝室" Binding="{Binding dor_num}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Border Grid.Row="2"

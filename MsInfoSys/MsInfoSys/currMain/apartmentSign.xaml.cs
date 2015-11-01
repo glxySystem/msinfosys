@@ -30,7 +30,7 @@ namespace MsInfoSys.currMain
 
         //早点到，专业下拉表
         public List<String> MajorLstSource { get; set; }
-        public string MajorLstSelect { get; set; }               
+        public string MajorLstSelect { get; set; }
         /// 构造方法       
         public apartmentSign()
         {
@@ -41,7 +41,7 @@ namespace MsInfoSys.currMain
             MajorLstSource = new List<string>() { "全部" };
             MajorLstSelect = "全部";
             GetMajorName();
-            this.DataContext = this;                     
+            this.DataContext = this;
         }
 
         /// <summary>
@@ -61,9 +61,6 @@ namespace MsInfoSys.currMain
 
             if (ds.Tables["MajorName"].Rows.Count > 0)
             {
-                /// Test Code
-                //MessageBox.Show(ds.Tables["MajorName"].Rows.Count.ToString());
-
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
                     //Console.WriteLine(row[0].ToString());
@@ -76,7 +73,7 @@ namespace MsInfoSys.currMain
             }
         }
 
-        private  void GetGrade()
+        private void GetGrade()
         {
             /// 构造查询字符串
             string sql = "select grade_name  from grade";
@@ -101,32 +98,69 @@ namespace MsInfoSys.currMain
             }
         }
 
-        private void SignAdd_Click(object sender, RoutedEventArgs e)
+
+        private void Show_Click(object sender, RoutedEventArgs e)
         {
-            new apartmentSignAdd().ShowDialog();
+            new apartmentSign().Show();
         }
 
-        private void SignEdit_Click(object sender, RoutedEventArgs e)
+        private DataTable Show()
         {
-            //判断是否选中行数据,有则
-            new apartmentSignEdit().ShowDialog();
-            //若没有选中则 MessageBox.Show("请先点击选择一行数据！");
-        }
-
-        private void SignDelete_Click(object sender, RoutedEventArgs e)
-        {
-            if (MessageBox.Show("确定要删除吗", "问题", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.Yes)
+            DataTable dt = new DataTable();
+            try
             {
-                try
-                {
-                    //早点到信息删除操作
-                    MessageBox.Show("删除成功！");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                string sql1 = "select stu_number,stu_name,major_name,class_name,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
+                MySqlDataAdapter mda = new MySqlDataAdapter(sql1, DBHelper.MySQLStr);
+                DataSet ds = new DataSet();
+                mda.Fill(ds, "Show");
+
+                dt = ds.Tables["Show"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return dt;
+        }
+        //尝试构造拼接sql语句
+        //string field = "";
+        //if (ComboBox.SelectedItem == "全部" )
+        //{
+        //    str = " ";
+        //}
+        //else
+        //{
+
+        //}
+   
+
+    private void SignAdd_Click(object sender, RoutedEventArgs e)
+    {
+        new apartmentSignAdd().ShowDialog();
+    }
+
+    private void SignEdit_Click(object sender, RoutedEventArgs e)
+    {
+        //判断是否选中行数据,有则
+        new apartmentSignEdit().ShowDialog();
+        //若没有选中则 MessageBox.Show("请先点击选择一行数据！");
+    }
+
+    private void SignDelete_Click(object sender, RoutedEventArgs e)
+    {
+        if (MessageBox.Show("确定要删除吗", "问题", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.Yes)
+        {
+            try
+            {
+                //早点到信息删除操作
+                MessageBox.Show("删除成功！");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
 }
+    }
+

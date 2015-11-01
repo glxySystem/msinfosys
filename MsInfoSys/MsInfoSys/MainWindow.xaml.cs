@@ -34,6 +34,7 @@ namespace MsInfoSys
         public MainWindow()
         {
             InitializeComponent();
+            this.userName.Content = AuthUser.username;
             ShowIcon();
 
             //保证窗体显示在上方。 

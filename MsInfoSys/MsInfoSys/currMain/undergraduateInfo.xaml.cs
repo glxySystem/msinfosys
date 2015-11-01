@@ -45,7 +45,7 @@ namespace MsInfoSys.currMain
 
 
             StudentDataProvider sdp = new StudentDataProvider("select * from student","Student");
-            DataSet ds = sdp.GetStudents();
+            DataSet ds = sdp.GetRawData();
 
             ObservableCollection<Member> memberData = new ObservableCollection<Member>();
             memberData.Add(new Member()
@@ -104,7 +104,7 @@ namespace MsInfoSys.currMain
 
             StudentDataProvider sdp = new StudentDataProvider("select major_name  from major", "MajorName");
 
-            DataSet ds = sdp.GetStudents();
+            DataSet ds = sdp.GetRawData();
 
             if (ds.Tables["MajorName"].Rows.Count > 0)
             {

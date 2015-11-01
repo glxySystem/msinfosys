@@ -28,7 +28,7 @@ namespace MsInfoSys
             //DBHelper.conn.Close();
         }
 
-        public DataSet GetStudents()
+        public DataSet GetRawData()
         {
             return this.dataset;
         }

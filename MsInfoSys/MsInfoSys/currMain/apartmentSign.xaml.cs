@@ -35,6 +35,13 @@ namespace MsInfoSys.currMain
         public apartmentSign()
         {
             InitializeComponent();
+            //初始化内容必需显示数据
+            InitializeData();
+           
+        }
+
+        private void InitializeData()
+        {
             GradeLstSource = new List<string>() { "全部" };
             GradeLstSelect = "全部";
             GetGrade();
@@ -43,6 +50,7 @@ namespace MsInfoSys.currMain
             GetMajorName();
             this.DataContext = this;
         }
+
 
         /// <summary>
         /// 查询字符串：
@@ -78,7 +86,7 @@ namespace MsInfoSys.currMain
             ///
             StudentDataProvider sdp = new StudentDataProvider("select major_name  from major", "MajorName");
 
-            DataSet ds = sdp.GetStudents();
+            DataSet ds = sdp.GetRawData();
 
 
             if (ds.Tables["MajorName"].Rows.Count > 0)

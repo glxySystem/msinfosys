@@ -152,4 +152,66 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    <!-- 毕业生去向TabItem的样式 -->
+    <Style TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid>
+                        <!-- 主Border -->
+                        <Border Name="bd"
+                              Background="{TemplateBinding Background}"
+                               CornerRadius="25"
+                              Margin="10">
+                            <ContentPresenter ContentSource="Header"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Margin="5"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="bd" Property="Margin" Value="4" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="Margin" Value="4" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+    <!-- 毕业生去向TabControl的样式 -->
+    <Style TargetType="{x:Type TabControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabControl}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Padding="5">
+                            <TabPanel IsItemsHost="True" />
+                        </Border>
+                        <Border Grid.Row="1"
+                               BorderThickness="0,1,0,0"
+                               BorderBrush="#f2f2f2">
+                            <ContentPresenter ContentSource="SelectedContent" 
+                                             Name="PART_SelectedContentHost"/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--毕业生去向图片的样式-->
+    <Style x:Key="apartmentDefaultImg">
+        <Setter Property="Control.Width" Value="400"></Setter>
+        <Setter Property="Control.Height" Value="300"></Setter>
+    </Style>
 </ResourceDictionary>

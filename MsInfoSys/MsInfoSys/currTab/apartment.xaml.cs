@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace MsInfoSys.currTab
 {
@@ -23,6 +24,72 @@ namespace MsInfoSys.currTab
         public apartment()
         {
             InitializeComponent();
+            signView.DataContext = new apartmentSignViewModel();
+            sanitaryView.DataContext = new apartmentSanitaryViewModel();
+        }
+        //图表显示
+        public class apartmentSignViewModel
+        {
+            public ObservableCollection<TestClass> Sign { get; private set; }
+
+            public apartmentSignViewModel()
+            {
+                Sign = new ObservableCollection<TestClass>();
+                Sign.Add(new TestClass() { Category = "星期一", Number = 75 });
+                Sign.Add(new TestClass() { Category = "星期二", Number = 2 });
+                Sign.Add(new TestClass() { Category = "星期三", Number = 12 });
+                Sign.Add(new TestClass() { Category = "星期四", Number = 83 });
+                Sign.Add(new TestClass() { Category = "星期五", Number = 29 });
+            }
+
+            private object selectedItem = null;
+            public object SelectedItem
+            {
+                get
+                {
+                    return selectedItem;
+                }
+                set
+                {
+                    // selected item has changed
+                    selectedItem = value;
+                }
+            }
+        }
+
+        public class apartmentSanitaryViewModel
+        {
+            public ObservableCollection<TestClass> Sanitary { get; private set; }
+
+            public apartmentSanitaryViewModel()
+            {
+                Sanitary = new ObservableCollection<TestClass>();
+                Sanitary.Add(new TestClass() { Category = "第一周", Number = 6 });
+                Sanitary.Add(new TestClass() { Category = "第二周", Number = 2 });
+                Sanitary.Add(new TestClass() { Category = "第三周", Number = 8});
+                Sanitary.Add(new TestClass() { Category = "第四周", Number = 4 });
+            }
+
+            private object selectedItem = null;
+            public object SelectedItem
+            {
+                get
+                {
+                    return selectedItem;
+                }
+                set
+                {
+                    // selected item has changed
+                    selectedItem = value;
+                }
+            }
+        }
+        // class which represent a data point in the chart
+        public class TestClass
+        {
+            public string Category { get; set; }
+
+            public int Number { get; set; }
         }
 
         private void apartmentSign_Click(object sender, RoutedEventArgs e)

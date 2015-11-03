@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -143,6 +144,28 @@ namespace MsInfoSys.currMain
             DataTable dt = new DataTable();
             try
             {
+                //尝试构造拼接sql语句               
+                             
+                if (Name.SelectedItem = null)
+                {
+                    MessageBox.Show(item.Content.ToString());
+                }
+                {
+
+                    whereList.Add("Name=@Name");
+
+                    paramsList.Add(new SqlParameter("@Name", txtName.Text));
+
+                }
+                //string field = "";
+                //if (ComboBox.SelectedItem == "全部" )
+                //{
+                //    str = " ";
+                //}
+                //else
+                //{
+
+                //}
                 string sql1 = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql1, DBHelper.MySQLStr);
                 DataSet ds = new DataSet();
@@ -156,16 +179,7 @@ namespace MsInfoSys.currMain
             }
             return dt;
         }
-        //尝试构造拼接sql语句
-        //string field = "";
-        //if (ComboBox.SelectedItem == "全部" )
-        //{
-        //    str = " ";
-        //}
-        //else
-        //{
-
-        //}
+        
    
 
     private void SignAdd_Click(object sender, RoutedEventArgs e)

@@ -53,13 +53,10 @@
         <DataGrid Name="StuInfodataGrid"
                   Grid.Row="1"
                   Grid.Column="1"
-                  AlternatingRowBackground="#efefef"
+                  ItemsSource="{Binding}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
-                  IsReadOnly="True"
-                  ItemsSource="{Binding}"
-                  Padding="0,5,0,5"
-                  RowBackground="White"
+                  IsReadOnly="True"  
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=school_name}" Header="院系" />

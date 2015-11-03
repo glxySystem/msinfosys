@@ -15,6 +15,14 @@
         Top="30"
         WindowStyle="None"
         mc:Ignorable="d">
+    <Window.Resources>
+        <Storyboard x:Key="OnMouseDoubleClick1"/>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Control.MouseDoubleClick" SourceName="index">
+            <BeginStoryboard Storyboard="{StaticResource OnMouseDoubleClick1}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid Grid.IsSharedSizeScope="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="36" />

@@ -4,7 +4,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MsInfoSys.currTab"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             Loaded="UserControl_Loaded"
              d:DesignHeight="300"
              d:DesignWidth="300"
              mc:Ignorable="d">
@@ -35,6 +34,29 @@
                 </Button>
             </StackPanel>
         </Border>
-        <ContentControl Name="currMain" Grid.Row="1" />
+        <ContentControl Name="currMain" Grid.Row="1">
+            <DockPanel>
+                <TabControl SelectedIndex="1" Margin="20,0,0,0">
+                    <TabItem Header="10" Background="#EBB642">
+                        <Image Source="../icon/index/indeximg1.png" Style="{StaticResource apartmentDefaultImg}"></Image>
+                    </TabItem>
+                    <TabItem Header="11" Background="#FFAEFF7A">
+                        <Image Source="../icon/index/indeximg2.png" Style="{StaticResource apartmentDefaultImg}"></Image>
+                    </TabItem>
+                    <TabItem Header="12" Background="#FFA6D5FF">
+                        <Image Source="../icon/index/indeximg3.png" Style="{StaticResource apartmentDefaultImg}"></Image>
+                    </TabItem>
+                    <TabItem Header="13" Background="#EBB642">
+                        <Image Source="../icon/index/indeximg1.png" Style="{StaticResource apartmentDefaultImg}"></Image>
+                    </TabItem>
+                    <TabItem Header="14" Background="#FFAEFF7A">
+                        <Image Source="../icon/index/indeximg2.png" Style="{StaticResource apartmentDefaultImg}"></Image>
+                    </TabItem>
+                    <TabItem Header="15" Background="#FFA6D5FF">
+                        <Image Source="../icon/index/indeximg3.png" Style="{StaticResource apartmentDefaultImg}"></Image>
+                    </TabItem>
+                </TabControl>
+            </DockPanel>
+        </ContentControl>
     </Grid>
 </UserControl>

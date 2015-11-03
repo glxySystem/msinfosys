@@ -25,10 +25,6 @@ namespace MsInfoSys.currTab
             InitializeComponent();
         }
 
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            currMain.Content = new currMain.tabGraduate();
-        }
         //加载毕业生信息模块
         private void graduateInfoStack_MouseDown(object sender, MouseButtonEventArgs e)
         {

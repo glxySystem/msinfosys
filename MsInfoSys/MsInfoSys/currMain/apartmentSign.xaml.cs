@@ -148,24 +148,24 @@ namespace MsInfoSys.currMain
                 List<string> whereList = new List<string>();
                 List<SqlParameter> paramsList = new List<SqlParameter>();
 
-                if (ComboBox.ItemsSource != "全部")
+                if (MajorList.ItemsSource.ToString() != "全部")
                 {
                     whereList.Add("major_name=@MajorName");
-                    paramsList.Add(new SqlParameter("@MajorName", txtMajorName.Text));                    
+                    paramsList.Add(new SqlParameter("@MajorName", MajorList.Text));                    
                 }                
-                if (ComboBox.ItemsSource != "全部")
+                if (GradeList.ItemsSource.ToString() != "全部")
                 {
                     whereList.Add("grade_name=@GradeName");
-                    paramsList.Add(new SqlParameter("@GradeName", txtGradeName.Text));
+                    paramsList.Add(new SqlParameter("@GradeName", GradeList.Text));
                 }
                 string whereSql = string.Join(" and ", whereList);
                 //StudentDataProvider sdp = new StudentDataProvider("select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id");
                 //DataSet ds = sdp.GetRawData();
 
-                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban";
+                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
                 if (whereSql.Length > 0)
                 {
-                    sql = sql + " where " + whereSql;
+                    sql = sql  + whereSql;
                 }
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);

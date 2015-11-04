@@ -19,11 +19,13 @@
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
                 <ComboBox ItemsSource="{Binding GradeLstSource}"
+                          Name="GradeList"
                           SelectedIndex="0"
                           SelectedItem="{Binding GradeLstSelect}"
                           Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                <ComboBox ItemsSource="{Binding MajorLstSource}"
+                <ComboBox   Name="MajorList"
+                            ItemsSource="{Binding MajorLstSource}"
                           SelectedIndex="0"
                           SelectedItem="{Binding MajorLstSelect}"
                           Style="{StaticResource apartmentSignCondition}" />

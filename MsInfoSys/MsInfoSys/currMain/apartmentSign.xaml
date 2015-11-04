@@ -18,7 +18,8 @@
                 BorderThickness="0,0,0,1">
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox ItemsSource="{Binding GradeLstSource}"
+                <ComboBox Name="GradeLst"
+                          ItemsSource="{Binding GradeLstSource}"
                           SelectedIndex="0"
                           SelectedItem="{Binding GradeLstSelect}"
                           Style="{StaticResource apartmentSignCondition}" />
@@ -47,7 +48,7 @@
                   Grid.Row="1"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
-                  IsReadOnly="True"  
+                  IsReadOnly="True"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=stu_number}" Header="学号" />

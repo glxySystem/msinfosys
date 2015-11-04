@@ -145,29 +145,30 @@ namespace MsInfoSys.currMain
             try
             {
                 //尝试构造拼接sql语句               
-                             
-                if (Name.SelectedItem = null)
+                List<string> whereList = new List<string>();
+                List<SqlParameter> paramsList = new List<SqlParameter>();
+
+                if (ComboBox.ItemsSource != "全部")
                 {
-                    MessageBox.Show(item.Content.ToString());
-                }
+                    whereList.Add("major_name=@MajorName");
+                    paramsList.Add(new SqlParameter("@MajorName", txtMajorName.Text));                    
+                }                
+                if (ComboBox.ItemsSource != "全部")
                 {
-
-                    whereList.Add("Name=@Name");
-
-                    paramsList.Add(new SqlParameter("@Name", txtName.Text));
-
+                    whereList.Add("grade_name=@GradeName");
+                    paramsList.Add(new SqlParameter("@GradeName", txtGradeName.Text));
                 }
-                //string field = "";
-                //if (ComboBox.SelectedItem == "全部" )
-                //{
-                //    str = " ";
-                //}
-                //else
-                //{
+                string whereSql = string.Join(" and ", whereList);
+                //StudentDataProvider sdp = new StudentDataProvider("select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id");
+                //DataSet ds = sdp.GetRawData();
 
-                //}
-                string sql1 = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
-                MySqlDataAdapter mda = new MySqlDataAdapter(sql1, DBHelper.MySQLStr);
+                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban";
+                if (whereSql.Length > 0)
+                {
+                    sql = sql + " where " + whereSql;
+                }
+
+                MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
                 DataSet ds = new DataSet();
                 mda.Fill(ds, "Show");
 

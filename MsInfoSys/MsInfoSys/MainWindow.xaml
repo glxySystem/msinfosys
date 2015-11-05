@@ -192,17 +192,22 @@
                     </Button>
                 </Border>
             </StackPanel>
-            <GridSplitter Grid.Column="1"
-                          Width="2"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Stretch" />
-            <ContentControl x:Name="currTab" Grid.Column="2">
-                <chartingToolkit:Chart Width="100"
-                                       Height="100"
-                                       Margin="311,334,0,0"
-                                       HorizontalAlignment="Left"
-                                       VerticalAlignment="Top" />
-            </ContentControl>
+            <GridSplitter Grid.Column="1" Width="2"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Stretch"
+                              BorderThickness="0,0,0,3"
+                              BorderBrush="#2E8DCD"/>
+            <Border Grid.Column="2" BorderThickness="0,0,2,3" BorderBrush="#2E8DCD">
+                <ContentControl x:Name="currTab">
+                </ContentControl>
+            </Border>
         </Grid>
     </Grid>
 </Window>
+    <!--
+<chartingToolkit:Chart Width="100"
+        Height="100"
+        Margin="311,334,0,0"
+        HorizontalAlignment="Left"
+     VerticalAlignment="Top" />
+    -->

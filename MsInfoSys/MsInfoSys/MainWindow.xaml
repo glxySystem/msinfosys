@@ -170,7 +170,11 @@
                     </Button>
                 </Border>
                 <Border x:Name="qualityStack" Style="{StaticResource leftBorder}">
-                    <Button x:Name="quality" DataContext="1">
+                    <Button x:Name="quality" 
+                            DataContext="1" 
+                            Click="quality_Click" 
+                            MouseEnter="quality_MouseEnter" 
+                            MouseLeave="quality_MouseLeave">
                         <StackPanel Orientation="Horizontal" Style="{StaticResource navBlock}">
                             <Image x:Name="qualityImg"
                                    Source="./icon/quality.png"
@@ -179,7 +183,7 @@
                     </Button>
                 </Border>
                 <Border x:Name="decisionStack" Style="{StaticResource leftBorder}">
-                    <Button x:Name="decision" DataContext="1">
+                    <Button x:Name="decision" DataContext="1" Click="decision_Click" MouseEnter="decision_MouseEnter" MouseLeave="decision_MouseLeave">
                         <StackPanel Orientation="Horizontal" Style="{StaticResource navBlock}">
                             <Image x:Name="decisionImg"
                                    Source="./icon/decision.png"

@@ -13,25 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MsInfoSys.currTab
+namespace MsInfoSys.currMain.indexContent
 {
     /// <summary>
-    /// currTab0.xaml 的交互逻辑
+    /// indexContact.xaml 的交互逻辑
     /// </summary>
-    public partial class index : UserControl
+    public partial class indexContact : UserControl
     {
-        public index()
+        public indexContact()
         {
             InitializeComponent();
-        }
-        private void indexClock_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            indexContent.Content = new currMain.indexContent.indexClock();
-        }
-
-        private void indexcontact_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            indexContent.Content = new currMain.indexContent.indexContact();
         }
     }
 }

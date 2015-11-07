@@ -85,7 +85,7 @@ namespace MsInfoSys.currMain
             ///
             /// 新方法
             ///
-            StudentDataProvider sdp = new StudentDataProvider("select major_name  from major", "MajorName");
+            StudentDataProvider sdp = new StudentDataProvider("select major_name  from school_major", "MajorName");
 
             DataSet ds = sdp.GetRawData();
 
@@ -170,7 +170,7 @@ namespace MsInfoSys.currMain
                 //    sql = sql  + whereSql;
                 //}
 
-                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
+                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from school_major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
                 StudentDataProvider sdp = new StudentDataProvider(sql, "Show");
 
                 DataSet ds = sdp.GetRawData();

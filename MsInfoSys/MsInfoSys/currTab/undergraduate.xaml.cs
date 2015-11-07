@@ -42,11 +42,11 @@ namespace MsInfoSys.currTab
             public apartmentSignViewModel()
             {
                 Sign = new ObservableCollection<TestClass>();
-                Sign.Add(new TestClass() { Category = "星期一", Number = 75 });
-                Sign.Add(new TestClass() { Category = "星期二", Number = 2 });
-                Sign.Add(new TestClass() { Category = "星期三", Number = 12 });
-                Sign.Add(new TestClass() { Category = "星期四", Number = 83 });
-                Sign.Add(new TestClass() { Category = "星期五", Number = 29 });
+                Sign.Add(new TestClass() { Category = "江西", Number = 75 });
+                Sign.Add(new TestClass() { Category = "江苏", Number = 2 });
+                Sign.Add(new TestClass() { Category = "浙江", Number = 12 });
+                Sign.Add(new TestClass() { Category = "安徽", Number = 83 });
+                Sign.Add(new TestClass() { Category = "湖北", Number = 29 });
             }
 
             private object selectedItem = null;

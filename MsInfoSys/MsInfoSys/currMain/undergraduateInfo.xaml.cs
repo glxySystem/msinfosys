@@ -62,79 +62,14 @@ namespace MsInfoSys.currMain
                 mda.AcceptChangesDuringUpdate = true;
                 mda.Fill(dt);
                 StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
-               /// MessageBox.Show("打开数据库成功" + mda);
-            //}
-
-            //StuInfodataGrid.ItemsSource = null;
-            //memberData = new List<String>();
-            //if (ds.Tables["Student"].Rows.Count > 0)
-            //{
-            //    foreach (DataRow row in ds.Tables[0].Rows)
-            //    {
-            //        //Console.WriteLine(row[0].ToString());
-            //        //MajorLstSource.Add(row[0].ToString());
-            //        memberData.Add(row[0].ToString());
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("数据表为空！");
-            //}
-
-
-            //memberData.Add(new Member()
-            //{
-            //    Name = "Joe",
-            //    Age = "23",
-            //    Sex = SexOpt.Male,
-            //    Pass = true,
-            //    Email = new Uri("mailto:Joe@school.com")
-            //});
-            //memberData.Add(new Member()
-            //{
-            //    Name = "Mike",
-            //    Age = "20",
-            //    Sex = SexOpt.Male,
-            //    Pass = false,
-            //    Email = new Uri("mailto:Mike@school.com")
-            //});
-            //memberData.Add(new Member()
-            //{
-            //    Name = "Lucy",
-            //    Age = "25",
-            //    Sex = SexOpt.Female,
-            //    Pass = true,
-            //    Email = new Uri("mailto:Lucy@school.com")
-            //});
-            //StuInfodataGrid.DataContext = memberData;
         }
 
-
-        //public enum SexOpt { Male, Female };
-
-        //public class Member
-        //{
-        //    public string Name { get; set; }
-        //    public string Age { get; set; }
-        //    public SexOpt Sex { get; set; }
-        //    public bool Pass { get; set; }
-        //    public Uri Email { get; set; }
-        //}
 
         /// <summary>
         /// 查询字符串：
         /// </summary>
         private void GetMajorName()
         {
-            ///// 构造查询字符串
-            //string sql = "select major_name  from major";
-
-            //MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
-
-            ///// 设置XXX
-            //DataSet ds = new DataSet();
-
-            //mda.Fill(ds, "MajorName");
 
             StudentDataProvider sdp = new StudentDataProvider("select major_name  from major", "MajorName");
 

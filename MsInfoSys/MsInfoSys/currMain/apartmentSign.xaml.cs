@@ -129,7 +129,6 @@ namespace MsInfoSys.currMain
             }
         }
 
-        //点击这个按钮没反应，求解决
         //sql语句是正常的，有一条返回值
         private void Show_Click(object sender, RoutedEventArgs e)
         {
@@ -144,33 +143,42 @@ namespace MsInfoSys.currMain
             DataTable dt = new DataTable();
             try
             {
-                //尝试构造拼接sql语句               
-                List<string> whereList = new List<string>();
-                List<SqlParameter> paramsList = new List<SqlParameter>();
+                //尝试构造拼接sql语句   
 
-                if (MajorList.ItemsSource.ToString() != "全部")
-                {
-                    whereList.Add("major_name=@MajorName");
-                    paramsList.Add(new SqlParameter("@MajorName", MajorList.Text));                    
-                }                
-                if (GradeList.ItemsSource.ToString() != "全部")
-                {
-                    whereList.Add("grade_name=@GradeName");
-                    paramsList.Add(new SqlParameter("@GradeName", GradeList.Text));
-                }
-                string whereSql = string.Join(" and ", whereList);
+                //List<string> whereList = new List<string>();
+                //List<SqlParameter> paramsList = new List<SqlParameter>();
+
+                //if (MajorList.ItemsSource.ToString() != "全部")
+                //{
+                //    whereList.Add("major_name=@MajorName");
+                //    paramsList.Add(new SqlParameter("@MajorName", MajorList.SelectedItem));                    
+                //}
+                //if (GradeList.ItemsSource.ToString() != "全部")
+                //{
+                //    whereList.Add("grade_name=@GradeName");
+                //    paramsList.Add(new SqlParameter("@GradeName", GradeList.SelectedItem));
+                //}
+                //string whereSql = string.Join(" and ", whereList);
+
+
                 //StudentDataProvider sdp = new StudentDataProvider("select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id");
                 //DataSet ds = sdp.GetRawData();
 
-                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
-                if (whereSql.Length > 0)
-                {
-                    sql = sql  + whereSql;
-                }
+                //string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id = major.major_id and ";
+                //if (whereSql.Length > 0 && whereSql != null)
+                //{
+                //    sql = sql  + whereSql;
+                //}
 
-                MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
-                DataSet ds = new DataSet();
-                mda.Fill(ds, "Show");
+                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
+                StudentDataProvider sdp = new StudentDataProvider(sql, "Show");
+
+                DataSet ds = sdp.GetRawData();
+
+                ///MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
+                //DataSet ds = new DataSet();
+
+                //mda.Fill(ds, "Show");
 
                 dt = ds.Tables["Show"];
             }

@@ -105,7 +105,13 @@ namespace MsInfoSys.currMain
                 Close();
             }
 
-            private void doCancel_Click(object sender, RoutedEventArgs e)
+            //public static void Insert(Student student)
+            //{
+            //    string sql = string.Format("insert into student(id,name,address) values('{0}','{1}','{2}')", student.Id, student.Name, student.Address);
+            //    MySqlHelper.ExecuteNonQuery("server=192.168.1.1;database=s_t;uid=root;pwd=;", sql, null);
+            //}
+
+        private void doCancel_Click(object sender, RoutedEventArgs e)
             {
                 Close();
             }

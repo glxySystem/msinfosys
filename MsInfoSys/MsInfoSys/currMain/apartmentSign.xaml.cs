@@ -162,7 +162,7 @@ namespace MsInfoSys.currMain
                 //StudentDataProvider sdp = new StudentDataProvider("select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id");
                 //DataSet ds = sdp.GetRawData();
 
-                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
+                string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from school_major,school_class,student_new,stu_dormitory,stu_building where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
                 if (whereSql.Length > 0)
                 {
                     sql = sql  + whereSql;

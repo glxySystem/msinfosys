@@ -141,7 +141,7 @@
                     Grid.Column="4"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource indexBorder}">
-                    <StackPanel>
+                    <StackPanel Name="indexcontact" MouseDown="indexcontact_MouseDown">
                         <StackPanel.Background>
                             <ImageBrush ImageSource="../icon/index/indeximg9.png" />
                         </StackPanel.Background>

@@ -128,6 +128,9 @@
     <Compile Include="currMain\apartmentSignEdit.xaml.cs">
       <DependentUpon>apartmentSignEdit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="currMain\indexContent\indexContact.xaml.cs">
+      <DependentUpon>indexContact.xaml</DependentUpon>
+    </Compile>
     <Compile Include="currMain\StudentDataProvider.cs" />
     <Page Include="currMain\apartmentSign.xaml">
       <SubType>Designer</SubType>
@@ -142,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="currMain\indexContent\indexClock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="currMain\indexContent\indexContact.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -170,7 +170,11 @@
                     </Button>
                 </Border>
                 <Border x:Name="qualityStack" Style="{StaticResource leftBorder}">
-                    <Button x:Name="quality" DataContext="1">
+                    <Button x:Name="quality" 
+                            DataContext="1" 
+                            Click="quality_Click" 
+                            MouseEnter="quality_MouseEnter" 
+                            MouseLeave="quality_MouseLeave">
                         <StackPanel Orientation="Horizontal" Style="{StaticResource navBlock}">
                             <Image x:Name="qualityImg"
                                    Source="./icon/quality.png"
@@ -179,7 +183,7 @@
                     </Button>
                 </Border>
                 <Border x:Name="decisionStack" Style="{StaticResource leftBorder}">
-                    <Button x:Name="decision" DataContext="1">
+                    <Button x:Name="decision" DataContext="1" Click="decision_Click" MouseEnter="decision_MouseEnter" MouseLeave="decision_MouseLeave">
                         <StackPanel Orientation="Horizontal" Style="{StaticResource navBlock}">
                             <Image x:Name="decisionImg"
                                    Source="./icon/decision.png"
@@ -188,17 +192,22 @@
                     </Button>
                 </Border>
             </StackPanel>
-            <GridSplitter Grid.Column="1"
-                          Width="2"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Stretch" />
-            <ContentControl x:Name="currTab" Grid.Column="2">
-                <chartingToolkit:Chart Width="100"
-                                       Height="100"
-                                       Margin="311,334,0,0"
-                                       HorizontalAlignment="Left"
-                                       VerticalAlignment="Top" />
-            </ContentControl>
+            <GridSplitter Grid.Column="1" Width="2"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Stretch"
+                              BorderThickness="0,0,0,3"
+                              BorderBrush="#2E8DCD"/>
+            <Border Grid.Column="2" BorderThickness="0,0,2,3" BorderBrush="#2E8DCD">
+                <ContentControl x:Name="currTab">
+                </ContentControl>
+            </Border>
         </Grid>
     </Grid>
 </Window>
+    <!--
+<chartingToolkit:Chart Width="100"
+        Height="100"
+        Margin="311,334,0,0"
+        HorizontalAlignment="Left"
+     VerticalAlignment="Top" />
+    -->

@@ -1,11 +1,12 @@
 ﻿<UserControl x:Class="MsInfoSys.currTab.undergraduate"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MsInfoSys.currTab"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             Loaded="UserControl_Loaded"
              mc:Ignorable="d">
+    <!--  Loaded="UserControl_Loaded"  -->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -16,31 +17,90 @@
                 Padding="0,0,0,2">
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <Button>
-                    <StackPanel Name="undergraduateInfoStack" Style="{StaticResource tabStack}" MouseDown="undergraduateInfoStack_MouseDown">
+                    <StackPanel Name="undergraduateInfoStack"
+                                MouseDown="undergraduateInfoStack_MouseDown"
+                                Style="{StaticResource tabStack}">
                         <Image Source="../icon/undergraduateInfo.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">基本信息</Label>
                     </StackPanel>
                 </Button>
                 <Button>
-                    <StackPanel Name="undergraduateGradeStack" Style="{StaticResource tabStack}" MouseDown="undergraduateGradeStack_MouseDown">
+                    <StackPanel Name="undergraduateGradeStack"
+                                MouseDown="undergraduateGradeStack_MouseDown"
+                                Style="{StaticResource tabStack}">
                         <Image Source="../icon/undergraduateGrade.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">成绩管理</Label>
                     </StackPanel>
                 </Button>
                 <Button>
-                    <StackPanel Name="undergraduateTestStack" Style="{StaticResource tabStack}" MouseDown="undergraduateTestStack_MouseDown">
+                    <StackPanel Name="undergraduateTestStack"
+                                MouseDown="undergraduateTestStack_MouseDown"
+                                Style="{StaticResource tabStack}">
                         <Image Source="../icon/undergraduateTest.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">补缓考管理</Label>
                     </StackPanel>
                 </Button>
                 <Button>
-                    <StackPanel Name="undergraduateRewardStack" Style="{StaticResource tabStack}" MouseDown="undergraduateRewardStack_MouseDown">
+                    <StackPanel Name="undergraduateRewardStack"
+                                MouseDown="undergraduateRewardStack_MouseDown"
+                                Style="{StaticResource tabStack}">
                         <Image Source="../icon/undergraduateReward.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">奖惩管理</Label>
                     </StackPanel>
                 </Button>
             </StackPanel>
         </Border>
-        <ContentControl Name="currMain" Grid.Row="1" />
+        <ContentControl Name="currMain" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="350" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <chart:ClusteredColumnChart Name="signView"
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Width="400"
+                                            Height="350"
+                                            ChartSubTitle="早点到缺勤情况表"
+                                            ChartTitle=""
+                                            FontSize="14"
+                                            SelectedItem="{Binding Path=SelectedItem,
+                                                                   Mode=TwoWay}">
+                    <chart:ClusteredColumnChart.Series>
+                        <chart:ChartSeries VerticalAlignment="Top"
+                                           VerticalContentAlignment="Top"
+                                           DisplayMember="Category"
+                                           ItemsSource="{Binding Path=Sign}"
+                                           SeriesTitle="上一周情况"
+                                           ValueMember="Number" />
+                    </chart:ClusteredColumnChart.Series>
+                </chart:ClusteredColumnChart>
+
+                <chart:PieChart Name="sanitaryView"
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Width="400"
+                                Height="350"
+                                ChartSubTitle="卫生检查情况表(记录不合格寝室数量)"
+                                ChartTitle=""
+                                FontSize="14"
+                                SelectedItem="{Binding Path=SelectedItem,
+                                                       Mode=TwoWay}">
+                    <chart:PieChart.Series>
+                        <chart:ChartSeries VerticalAlignment="Top"
+                                           VerticalContentAlignment="Top"
+                                           DisplayMember="Category"
+                                           ItemsSource="{Binding Path=Sanitary}"
+                                           SeriesTitle="卫生检查情况表"
+                                           ValueMember="Number" />
+                    </chart:PieChart.Series>
+                </chart:PieChart>
+            </Grid>
+        </ContentControl>
     </Grid>
 </UserControl>

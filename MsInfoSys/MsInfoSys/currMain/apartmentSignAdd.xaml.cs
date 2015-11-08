@@ -48,7 +48,7 @@ namespace MsInfoSys.currMain
             private void GetMajorName()
             {
                 /// 构造查询字符串
-                string sql = "select major_name  from major";
+                string sql = "select name  from major";
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -77,7 +77,7 @@ namespace MsInfoSys.currMain
             private void GetGrade()
             {
                 /// 构造查询字符串
-                string sql = "select grade_name  from grade";
+                string sql = "select name  from grade";
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -104,12 +104,33 @@ namespace MsInfoSys.currMain
                 //添加点到信息操作
                 Close();
             }
-
-            //public static void Insert(Student student)
-            //{
-            //    string sql = string.Format("insert into student(id,name,address) values('{0}','{1}','{2}')", student.Id, student.Name, student.Address);
-            //    MySqlHelper.ExecuteNonQuery("server=192.168.1.1;database=s_t;uid=root;pwd=;", sql, null);
-            //}
+            //先读取数据，验证学号和年纪等是否匹配
+            public static ShowCheck(object sender, RoutedEventArgs e)
+            {
+                StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building"，"ShowCheck");
+                DataSet ds = sdp.GetRawData();
+                if (ds.Tables["ShowCheck"].Rows.Count > 0)
+                {
+                    foreach (DataRow row in ds.Tables[0].Rows)
+                    {
+                        //Console.WriteLine(row[0].ToString());
+                            ShowCheck.Add(row[0].ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("数据表为空！");
+                }
+                dt = ds.Tables["ShowCheck"];
+             }
+            //插入数据，插入stu_mor表
+            public static  Insert(Student student)
+            {
+                DataSet dt = new dt;
+                
+                StudentDataProvider sdp = new StudentDataProvider("insert into stu_mor(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", stu_mor(stu_id, moringsign_id, state);
+                         
+            }
 
         private void doCancel_Click(object sender, RoutedEventArgs e)
             {

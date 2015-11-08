@@ -127,7 +127,7 @@ namespace MsInfoSys.currMain
         private void GetMajorName()
         {
             ///// 构造查询字符串
-            //string sql = "select major_name  from major";
+            //string sql = "select name  from major";
 
             //MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -136,7 +136,7 @@ namespace MsInfoSys.currMain
 
             //mda.Fill(ds, "MajorName");
 
-            StudentDataProvider sdp = new StudentDataProvider("select major_name  from major", "MajorName");
+            StudentDataProvider sdp = new StudentDataProvider("select name  from major", "MajorName");
 
             DataSet ds = sdp.GetRawData();
 
@@ -160,7 +160,7 @@ namespace MsInfoSys.currMain
         private void GetGrade()
         {
             /// 构造查询字符串
-            string sql = "select grade_name  from grade";
+            string sql = "select name  from grade";
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 

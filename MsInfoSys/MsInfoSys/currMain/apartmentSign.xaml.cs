@@ -178,6 +178,12 @@ namespace MsInfoSys.currMain
                 ///MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
                 //DataSet ds = new DataSet();
 
+                //string sql = "select stu_number,stu_name,major_name,class_name,ban_num,dor_num from school_major,school_class,student_new,stu_dormitory,stu_building where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id";
+                //if (whereSql.Length > 0)
+                //{
+                //    sql = sql  + whereSql;
+                //}
+
                 //mda.Fill(ds, "Show");
 
                 dt = ds.Tables["Show"];

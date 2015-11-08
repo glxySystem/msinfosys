@@ -24,14 +24,18 @@ namespace MsInfoSys.currMain
     /// </summary>
     public partial class undergraduateInfo : UserControl
     {
-
-        //早点到，年级下拉表
+        public List<String> si { get; set; }
+        //在校生信息，年级下拉表
         public List<String> GradeLstSource { get; set; }
         public string GradeLstSelect { get; set; }
 
-        //早点到，专业下拉表
+        //在校生信息，专业下拉表
         public List<String> MajorLstSource { get; set; }
         public string MajorLstSelect { get; set; }
+
+        //在校生信息，班级下拉表
+        public List<String> ClassLstSource { get; set; }
+        public string ClassLstSelect { get; set; }
 
         public List<String> memberData { get; set; }
 
@@ -39,93 +43,23 @@ namespace MsInfoSys.currMain
         public undergraduateInfo()
         {
             InitializeComponent();
-            GradeLstSource = new List<string>() { "全部" };
-            GradeLstSelect = "全部";
+
             GetGrade();
-            MajorLstSource = new List<string>() { "全部" };
-            MajorLstSelect = "全部";
+
             GetMajorName();
+
+            GetClass();
+
             this.DataContext = this;
-
-
-            //StudentDataProvider sdp = new StudentDataProvider("select * from student","Student");
-            //DataSet ds = sdp.GetRawData();
-
-
-            //string MySQLStr = ConfigurationManager.ConnectionStrings["MySqlConn"].ConnectionString;
-            //MySqlConnection conn = new MySqlConnection(MySQLStr);
-            //if (conn != null)
-            //{
-                MySqlDataAdapter mda = new MySqlDataAdapter("select * from student", DBHelper.conn);
-                //MessageBox.Show(mda);
-                DataTable dt = new DataTable();
-                mda.AcceptChangesDuringUpdate = true;
-                mda.Fill(dt);
-                StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
-               /// MessageBox.Show("打开数据库成功" + mda);
-            //}
-
-            //StuInfodataGrid.ItemsSource = null;
-            //memberData = new List<String>();
-            //if (ds.Tables["Student"].Rows.Count > 0)
-            //{
-            //    foreach (DataRow row in ds.Tables[0].Rows)
-            //    {
-            //        //Console.WriteLine(row[0].ToString());
-            //        //MajorLstSource.Add(row[0].ToString());
-            //        memberData.Add(row[0].ToString());
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("数据表为空！");
-            //}
-
-
-            //memberData.Add(new Member()
-            //{
-            //    Name = "Joe",
-            //    Age = "23",
-            //    Sex = SexOpt.Male,
-            //    Pass = true,
-            //    Email = new Uri("mailto:Joe@school.com")
-            //});
-            //memberData.Add(new Member()
-            //{
-            //    Name = "Mike",
-            //    Age = "20",
-            //    Sex = SexOpt.Male,
-            //    Pass = false,
-            //    Email = new Uri("mailto:Mike@school.com")
-            //});
-            //memberData.Add(new Member()
-            //{
-            //    Name = "Lucy",
-            //    Age = "25",
-            //    Sex = SexOpt.Female,
-            //    Pass = true,
-            //    Email = new Uri("mailto:Lucy@school.com")
-            //});
-            //StuInfodataGrid.DataContext = memberData;
         }
 
-
-        //public enum SexOpt { Male, Female };
-
-        //public class Member
-        //{
-        //    public string Name { get; set; }
-        //    public string Age { get; set; }
-        //    public SexOpt Sex { get; set; }
-        //    public bool Pass { get; set; }
-        //    public Uri Email { get; set; }
-        //}
 
         /// <summary>
         /// 查询字符串：
         /// </summary>
         private void GetMajorName()
         {
+<<<<<<< HEAD
             ///// 构造查询字符串
             //string sql = "select name  from major";
 
@@ -133,21 +67,25 @@ namespace MsInfoSys.currMain
 
             ///// 设置XXX
             //DataSet ds = new DataSet();
+=======
+            MajorLstSource = new List<string>() { "全部" };
+>>>>>>> origin/master
 
-            //mda.Fill(ds, "MajorName");
+            MajorLstSelect = "全部";
 
+<<<<<<< HEAD
             StudentDataProvider sdp = new StudentDataProvider("select name  from major", "MajorName");
+=======
+            StudentDataProvider sdp = new StudentDataProvider("select major_name  from school_major", "MajorName");
+>>>>>>> origin/master
 
             DataSet ds = sdp.GetRawData();
 
             if (ds.Tables["MajorName"].Rows.Count > 0)
             {
-                /// Test Code
-                //MessageBox.Show(ds.Tables["MajorName"].Rows.Count.ToString());
 
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
-                    //Console.WriteLine(row[0].ToString());
                     MajorLstSource.Add(row[0].ToString());
                 }
             }
@@ -159,8 +97,17 @@ namespace MsInfoSys.currMain
 
         private void GetGrade()
         {
+            
+            GradeLstSource = new List<string>() { "全部" };
+
+            GradeLstSelect = "全部";
+
             /// 构造查询字符串
+<<<<<<< HEAD
             string sql = "select name  from grade";
+=======
+            string sql = "select grade_name  from school_grade";
+>>>>>>> origin/master
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -181,5 +128,101 @@ namespace MsInfoSys.currMain
                 MessageBox.Show("数据表为空！");
             }
         }
+
+        private void GetClass()
+        {
+            ClassLstSource = new List<string>();
+            ClassLstSource.Add("全部");
+            ClassLstSelect = "全部";
+        }
+
+
+
+
+        private void QueryButton_Click(object sender, RoutedEventArgs e)
+        {
+            if ("全部" == ClassLstSelect && "全部" == MajorLstSelect && "全部" == GradeLstSelect)
+            {
+                DataTable dt = DBHelper.ExecuteDataSet("select * from student");
+
+                StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
+            }
+            else
+            {
+                StuInfodataGrid.ItemsSource = null;
+                MessageBox.Show("请选择具体查询信息");
+            }
+            
+        }
+
+        private void StuInfodataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
+            if (StuInfodataGrid.SelectedItem != null)
+            {
+                //AppGlobal.ShowPatientInfo.Execute(DGView.SelectedItem);
+                //StuInfodataGrid.SelectAll();
+                //object dv = StuInfodataGrid.SelectedItem;
+
+                DataRowView mySelectedElement = (DataRowView)StuInfodataGrid.SelectedItem;
+                string param = mySelectedElement.Row["uid"].ToString();
+                
+                //MessageBox.Show(result);
+                //DataTable dt = DBHelper.ExecuteDataSet("select * from student where uid = @getId",new MySqlParameter("@getId",result));
+
+                //StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
+                StudentInfoDialog sid = new StudentInfoDialog(param);
+                sid.ShowDialog();
+
+
+            }
+        }
     }
+
+
+    class StuInfo
+    {
+        public string school_name { get; set; }
+    }
+
+
 }
+
+
+
+//StudentDataProvider sdp = new StudentDataProvider("select * from student","Student");
+//DataSet ds = sdp.GetRawData();
+
+
+//string MySQLStr = ConfigurationManager.ConnectionStrings["MySqlConn"].ConnectionString;
+//MySqlConnection conn = new MySqlConnection(MySQLStr);
+//if (conn != null)
+//{
+
+
+//MySqlDataAdapter mda = new MySqlDataAdapter("select * from student", DBHelper.conn);
+//MessageBox.Show(mda);
+//DataTable dt = new DataTable();
+//mda.AcceptChangesDuringUpdate = true;
+//mda.Fill(dt);
+//StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
+
+
+
+//StudentInfo = TableToList(table);
+//cityName.ItemsSource = listCity;
+
+
+////将返回的表转换成List<Area>  
+//private List<string> TableToList(DataTable table)
+//{
+//    List<string> si = new List<string>();
+//    foreach (DataRow row in table.Rows)
+//    {
+//        //string city = new Area();
+//        //city.AreaID = (int)row["AreaId"];
+//        //city.AreaName = (string)row["AreaName"];
+//        si.Add(city);
+//    }
+//    return area;
+//}

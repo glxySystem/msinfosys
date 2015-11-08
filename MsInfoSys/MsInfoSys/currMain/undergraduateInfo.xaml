@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MsInfoSys.currMain"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignWidth="569.955"
              mc:Ignorable="d">
 
     <!--<UserControl.Resources>
@@ -41,11 +42,20 @@
                           SelectedIndex="0"
                           SelectedItem="{Binding MajorLstSelect}"
                           Style="{StaticResource apartmentSignCondition}" />
+                <Label Style="{StaticResource apartmentSignLabel}">班级:</Label>
+                <ComboBox ItemsSource="{Binding ClassLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding ClassLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Border Width="60"
                         Height="24"
                         Margin="10,0,0,0"
                         Background="#2C97DF">
-                    <Button FontSize="14" Foreground="White">查看</Button>
+                    <Button Click="QueryButton_Click"
+                            FontSize="14"
+                            Foreground="White">
+                        查看
+                    </Button>
                 </Border>
             </StackPanel>
         </Border>
@@ -53,10 +63,11 @@
         <DataGrid Name="StuInfodataGrid"
                   Grid.Row="1"
                   Grid.Column="1"
-                  ItemsSource="{Binding}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
-                  IsReadOnly="True"  
+                  IsReadOnly="True"
+                  ItemsSource="{Binding}"
+                  MouseDoubleClick="StuInfodataGrid_MouseDoubleClick"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=school_name}" Header="院系" />
@@ -66,10 +77,10 @@
                 <DataGridTextColumn Binding="{Binding Path=sex}" Header="性别" />
                 <DataGridTextColumn Binding="{Binding Path=birth_date}" Header="出生日期" />
                 <DataGridTextColumn Binding="{Binding Path=nationality}" Header="民族" />
-                <DataGridTextColumn Binding="{Binding Path=birth_place}" Header="出生地" />
+                <!--<DataGridTextColumn Binding="{Binding Path=birth_place}" Header="出生地" />-->
                 <DataGridTextColumn Binding="{Binding Path=native_place}" Header="籍贯" />
                 <DataGridTextColumn Binding="{Binding Path=idcard_number}" Header="身份证号" />
-                <DataGridTextColumn Binding="{Binding Path=exam_number}" Header="考生号" />
+                <!--<DataGridTextColumn Binding="{Binding Path=exam_number}" Header="考生号" />-->
                 <DataGridTextColumn Binding="{Binding Path=enrollment_date}" Header="入学日期" />
 
                 <!--<DataGridTextColumn Width="80"

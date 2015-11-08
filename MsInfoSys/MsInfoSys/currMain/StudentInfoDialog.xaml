@@ -1,0 +1,61 @@
+﻿<Window x:Class="MsInfoSys.currMain.StudentInfoDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:MsInfoSys.currMain"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Width="623.82"
+        d:DesignHeight="300"
+        mc:Ignorable="d">
+    <Grid Margin="0,0,0,-195">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <TabControl x:Name="tabControl"
+                    Grid.Row="1"
+                    Height="236"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top">
+            <TabItem GotFocus="TabItem_GotFocus"
+                     Header="基本情况"
+                     MouseDown="TabItem_MouseDown">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem GotFocus="TabItem_StudyCard_GotFocus"
+                     Header="学籍"
+                     MouseDown="TabItem2_MouseDown">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="家庭" MouseDown="TabItem2_MouseDown">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="获奖">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="违纪与处分">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="综合测评及奖学金">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="资助">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="社会工作">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="政治面貌">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="简历表">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+            <TabItem Header="其他信息">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

@@ -193,7 +193,8 @@ namespace MsInfoSys.currMain
 
     private void SignAdd_Click(object sender, RoutedEventArgs e)
     {
-        new apartmentSignAdd().ShowDialog();
+            apartmentSignAdd asa = new apartmentSignAdd();
+            asa.ShowDialog();
     }
 
     private void SignEdit_Click(object sender, RoutedEventArgs e)

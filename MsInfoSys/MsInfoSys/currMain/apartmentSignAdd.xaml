@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:MsInfoSys.currMain"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Title="添加早点到信息"
         Width="670"
         Height="300"
@@ -21,13 +22,21 @@
                 BorderBrush="#F2F3F4"
                 BorderThickness="0,0,0,1">
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
+                <Label Style="{StaticResource apartmentSignLabel}">学号:</Label>
+                <TextBox Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}"  ItemsSource="{Binding GradeLstSource}" SelectedItem="{Binding GradeLstSelect}"/>
+                <ComboBox ItemsSource="{Binding GradeLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding GradeLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}" ItemsSource="{Binding MajorLstSource}" SelectedItem="{Binding MajorLstSelect}"/>
-                         
+                <ComboBox ItemsSource="{Binding MajorLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding MajorLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
+
                 <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
-                <DatePicker Style="{StaticResource apartmentSignCondition}" />
+                <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
             </StackPanel>
         </Border>
         <Border Grid.Row="1"
@@ -38,18 +47,18 @@
                 <TextBox Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
                 <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                    <ComboBoxItem>全部</ComboBoxItem>
+
                     <ComboBoxItem>2015级</ComboBoxItem>
                     <ComboBoxItem>2014级</ComboBoxItem>
                 </ComboBox>
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
                 <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                    <ComboBoxItem>全部</ComboBoxItem>
+
                     <ComboBoxItem>信管</ComboBoxItem>
                     <ComboBoxItem>管科</ComboBoxItem>
                 </ComboBox>
                 <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
-                <DatePicker Style="{StaticResource apartmentSignCondition}" />
+                <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
             </StackPanel>
         </Border>
         <Border Grid.Row="2"
@@ -60,18 +69,18 @@
                 <TextBox Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
                 <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                    <ComboBoxItem>全部</ComboBoxItem>
+
                     <ComboBoxItem>2015级</ComboBoxItem>
                     <ComboBoxItem>2014级</ComboBoxItem>
                 </ComboBox>
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
                 <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                    <ComboBoxItem>全部</ComboBoxItem>
+
                     <ComboBoxItem>信管</ComboBoxItem>
                     <ComboBoxItem>管科</ComboBoxItem>
                 </ComboBox>
                 <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
-                <DatePicker Style="{StaticResource apartmentSignCondition}" />
+                <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
             </StackPanel>
         </Border>
         <Border Grid.Row="3"
@@ -82,18 +91,18 @@
                 <TextBox Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
                 <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                    <ComboBoxItem>全部</ComboBoxItem>
+
                     <ComboBoxItem>2015级</ComboBoxItem>
                     <ComboBoxItem>2014级</ComboBoxItem>
                 </ComboBox>
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
                 <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                    <ComboBoxItem>全部</ComboBoxItem>
+
                     <ComboBoxItem>信管</ComboBoxItem>
                     <ComboBoxItem>管科</ComboBoxItem>
                 </ComboBox>
                 <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
-                <DatePicker Style="{StaticResource apartmentSignCondition}" />
+                <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
             </StackPanel>
         </Border>
         <Border Grid.Row="4"

@@ -87,7 +87,7 @@ namespace MsInfoSys.currMain
             ///
 
 
-            StudentDataProvider sdp = new StudentDataProvider("select major_name  from school_major", "MajorName");
+            StudentDataProvider sdp = new StudentDataProvider("select major_name  from ms_major", "MajorName");
 
             DataSet ds = sdp.GetRawData();
 

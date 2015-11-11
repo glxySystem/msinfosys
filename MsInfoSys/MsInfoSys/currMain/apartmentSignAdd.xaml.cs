@@ -147,7 +147,7 @@ namespace MsInfoSys.currMain
             //先读取数据，验证学号和年纪等是否匹配
             public static void ShowCheck(object sender, RoutedEventArgs e)
             {
-                StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building"，"ShowCheck");
+                StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building","ShowCheck");
                 DataSet ds = sdp.GetRawData();
                 if (ds.Tables["ShowCheck"].Rows.Count > 0)
                 {
@@ -164,13 +164,13 @@ namespace MsInfoSys.currMain
                // dt = ds.Tables["ShowCheck"];
              }
             //插入数据，插入stu_mor表
-            public static  Insert(Student student)
-            {
-               // DataSet dt = new dt;
+            //public static  void Insert(Student student)
+            //{
+            //   // DataSet dt = new dt;
                 
-                //StudentDataProvider sdp = new StudentDataProvider("insert into stu_mor(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", stu_mor(stu_id, moringsign_id, state);
+            //    //StudentDataProvider sdp = new StudentDataProvider("insert into stu_mor(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", stu_mor(stu_id, moringsign_id, state);
                          
-            }
+            //}
 
         private void doCancel_Click(object sender, RoutedEventArgs e)
             {

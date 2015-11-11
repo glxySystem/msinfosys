@@ -66,7 +66,6 @@ namespace MsInfoSys.currMain
 
             //构造查询字符串
 
-            //string sql = "select major_name  from major";
             //string sql = "select name  from major";
 
             //MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
@@ -86,7 +85,6 @@ namespace MsInfoSys.currMain
             ///
             /// 新方法
             ///
-            StudentDataProvider sdp = new StudentDataProvider("select major_name  from ms_major", "MajorName");
 
 
             StudentDataProvider sdp = new StudentDataProvider("select major_name  from school_major", "MajorName");

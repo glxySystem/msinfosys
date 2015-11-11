@@ -63,7 +63,7 @@ namespace MsInfoSys.currMain
 
             MajorLstSelect = "全部";
 
-            StudentDataProvider sdp = new StudentDataProvider("select major_name  from school_major", "MajorName");
+            StudentDataProvider sdp = new StudentDataProvider("select major_name  from ms_major", "MajorName");
 
             DataSet ds = sdp.GetRawData();
 
@@ -89,7 +89,7 @@ namespace MsInfoSys.currMain
             GradeLstSelect = "全部";
 
             /// 构造查询字符串
-            string sql = "select grade_name  from school_grade";
+            string sql = "select grade_num  from ms_grade";
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -125,7 +125,7 @@ namespace MsInfoSys.currMain
         {
             if ("全部" == ClassLstSelect && "全部" == MajorLstSelect && "全部" == GradeLstSelect)
             {
-                DataTable dt = DBHelper.ExecuteDataSet("select * from student");
+                DataTable dt = DBHelper.ExecuteDataSet("select * from ms_student");
 
                 StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
             }

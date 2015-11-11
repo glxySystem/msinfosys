@@ -29,8 +29,11 @@ namespace MsInfoSys.currMain
             //早点到，专业下拉表
             public List<String> MajorLstSource { get; set; }
             public string MajorLstSelect { get; set; }
-            /// 构造方法       
-            public apartmentSignAdd()
+
+        public List<String> ClassLstSource { get; set; }
+        public string ClassLstSelect { get; set; }
+        /// 构造方法       
+        public apartmentSignAdd()
             {
                 InitializeComponent();
                 GradeLstSource = new List<string>() { "全部" };
@@ -39,6 +42,9 @@ namespace MsInfoSys.currMain
                 MajorLstSource = new List<string>() { "全部" };
                 MajorLstSelect = "全部";
                 GetMajorName();
+                ClassLstSource = new List<string>() { "全部" };
+                ClassLstSelect = "全部";
+                GetClass();
                 this.DataContext = this;
             }
 
@@ -48,7 +54,7 @@ namespace MsInfoSys.currMain
             private void GetMajorName()
             {
                 /// 构造查询字符串
-                string sql = "select major_name  from school_major";
+                string sql = "select major_name  from ms_major";
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -77,7 +83,7 @@ namespace MsInfoSys.currMain
             private void GetGrade()
             {
                 /// 构造查询字符串
-                string sql = "select grade_name  from school_grade";
+                string sql = "select grade_num  from ms_grade";
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -98,9 +104,35 @@ namespace MsInfoSys.currMain
                     MessageBox.Show("数据表为空！");
                 }
             }
+
+            private void GetClass()
+        {
+            /// 构造查询字符串
+            string sql = "select class_name  from ms_class";
+
+            MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
+
+            /// 设置XXX
+            DataSet ds = new DataSet();
+
+            mda.Fill(ds, "Class");
+
+            if (ds.Tables["Class"].Rows.Count > 0)
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    ClassLstSource.Add(row[0].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("数据表为空！");
+            }
+        }
         
             private void doSignAdd_Click(object sender, RoutedEventArgs e)
             {
+
                 //添加点到信息操作
                 Close();
             }

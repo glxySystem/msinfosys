@@ -55,7 +55,6 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=stu_number}" Header="学号" />
                 <DataGridTextColumn Binding="{Binding Path=stu_name}" Header="姓名" />
-                <DataGridTextColumn Binding="{Binding Path=major_name}" Header="专业" />
                 <DataGridTextColumn Binding="{Binding Path=class_name}" Header="班级" />
                 <DataGridTextColumn Binding="{Binding Path=ban_num}" Header="楼栋" />
                 <DataGridTextColumn Binding="{Binding Path=dor_num}" Header="寝室" />

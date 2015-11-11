@@ -67,6 +67,7 @@ namespace MsInfoSys.currMain
             //构造查询字符串
 
             //string sql = "select major_name  from major";
+            //string sql = "select name  from major";
 
             //MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -86,6 +87,9 @@ namespace MsInfoSys.currMain
             /// 新方法
             ///
             StudentDataProvider sdp = new StudentDataProvider("select major_name  from ms_major", "MajorName");
+
+
+            StudentDataProvider sdp = new StudentDataProvider("select major_name  from school_major", "MajorName");
 
             DataSet ds = sdp.GetRawData();
 
@@ -108,6 +112,8 @@ namespace MsInfoSys.currMain
         {
             /// 构造查询字符串
             string sql = "select grade_num  from ms_grade";
+
+
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -160,6 +166,27 @@ namespace MsInfoSys.currMain
                 //}
                 //string whereSql = string.Join(" and ", whereList);
 
+
+
+                //if (MajorList.ItemsSource.ToString() != "全部")
+                //{
+                //    whereList.Add("name=@MajorName");
+                //    paramsList.Add(new SqlParameter("@MajorName", MajorList.Text));                    
+                //}                
+                //if (GradeList.ItemsSource.ToString() != "全部")
+                //{
+                //    whereList.Add("name=@GradeName");
+                //    paramsList.Add(new SqlParameter("@GradeName", GradeList.Text));
+                //}
+                //string whereSql = string.Join(" and ", whereList);
+                ////StudentDataProvider sdp = new StudentDataProvider("select stu_number,stu_name,name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id");
+                ////DataSet ds = sdp.GetRawData();
+
+                //string sql = "select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building";
+                //if (whereSql.Length > 0)
+                //{
+                //    sql = sql  + whereSql;
+                //}
 
                 //StudentDataProvider sdp = new StudentDataProvider("select stu_number,stu_name,major_name,class_name,ban_num,dor_num from major,class,student_new,dormitory,ban where stu_dormitory=dor_id and stu_class=class_id and dor_ban=ban_id and class.major_id=major.major_id");
                 //DataSet ds = sdp.GetRawData();

@@ -48,6 +48,7 @@ namespace MsInfoSys.currMain
         private void GetMajorName()
         {
             /// 构造查询字符串
+
             string sql = "select major_name  from school_major";
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
@@ -77,7 +78,9 @@ namespace MsInfoSys.currMain
         private void GetGrade()
         {
             /// 构造查询字符串
+
             string sql = "select grade_name  from ms_grade";
+
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 

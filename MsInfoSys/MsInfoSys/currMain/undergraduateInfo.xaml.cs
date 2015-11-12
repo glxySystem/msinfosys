@@ -96,13 +96,16 @@ namespace MsInfoSys.currMain
 
         private void GetGrade()
         {
-            
+            //获取当前年份
+            int year = DateTime.Now.Year;
+            //MessageBox.Show(y.ToString());
+
             GradeLstSource = new List<string>() { "全部" };
 
             GradeLstSelect = "全部";
 
             /// 构造查询字符串
-            string sql = "select grade_num  from ms_grade";
+            string sql = string.Format("select grade_num from ms_grade where ('{0}'- grade_num) < 4", year);
 
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);

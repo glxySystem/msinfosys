@@ -14,140 +14,52 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
         </Grid.RowDefinitions>
         <Border Grid.Row="0"
                 BorderBrush="#F2F3F4"
                 BorderThickness="0,0,0,1">
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
-                <!--<Label Style="{StaticResource apartmentSignLabel}">学号:</Label>
-                <TextBox Style="{StaticResource apartmentSignCondition}" />-->
+
                 <Label Style="{StaticResource apartmentSignLabel}">班级:</Label>
                 <ComboBox ItemsSource="{Binding ClassLstSource}"
                           SelectedIndex="0"
                           SelectedItem="{Binding ClassLstSource}"
                           Style="{StaticResource apartmentSignCondition}" />
-                <!--<Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox ItemsSource="{Binding GradeLstSource}"
-                          SelectedIndex="0"
-                          SelectedItem="{Binding GradeLstSelect}"
-                          Style="{StaticResource apartmentSignCondition}" />-->
-                <!--<Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                <ComboBox ItemsSource="{Binding MajorLstSource}"
-                          SelectedIndex="0"
-                          SelectedItem="{Binding MajorLstSelect}"
-                          Style="{StaticResource apartmentSignCondition}" />-->
-
                 <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
                 <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
+                <Label Style="{StaticResource apartmentSignLabel}">周数:</Label>
+                <ComboBox ItemsSource="{Binding ClassLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding ClassLstSource}"
+                          Style="{StaticResource apartmentSignCondition}" />
             </StackPanel>
         </Border>
         <Border Grid.Row="1"
                 BorderBrush="#F2F3F4"
                 BorderThickness="0,0,0,1">
-            <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
 
-                <!--<Label Style="{StaticResource apartmentSignLabel}">学号:</Label>
-                <TextBox Style="{StaticResource apartmentSignCondition}" />-->
-
-                <Label Style="{StaticResource apartmentSignLabel}">学号:</Label>
-                <TextBox Name="TextBox1" Style="{StaticResource apartmentSignCondition}" />
-
-                <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-
-                    <ComboBoxItem>2015级</ComboBoxItem>
-                    <ComboBoxItem>2014级</ComboBoxItem>
-                </ComboBox>
-                <!--<Label Style="{StaticResource apartmentSignLabel}">专业:
-                    </Label>
-                    =======
-                    <Label Style="{StaticResource apartmentSignLabel}">状态:</Label>
-                    >>>>>>> origin/master
-                    <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-                        <<<<<<< HEAD
-                    <ComboBoxItem>缺到
-                            </ComboBoxItem>
-                            <ComboBoxItem>请假</ComboBoxItem>
-                            =======
-
-                            <ComboBoxItem>信管</ComboBoxItem>
-                            <ComboBoxItem>管科</ComboBoxItem>
-                            <<<<<<< HEAD
-                </ComboBox>-->
-
-                <!--</ComboBox>-->
-                <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
-                <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
-            </StackPanel>
-        </Border>
-        <Border Grid.Row="2"
-                BorderBrush="#F2F3F4"
-                BorderThickness="0,0,0,1">
-            <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
-                <Label Style="{StaticResource apartmentSignLabel}">学号:</Label>
-                <TextBox Style="{StaticResource apartmentSignCondition}" />
-                <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-
-                    <ComboBoxItem>2015级</ComboBoxItem>
-                    <ComboBoxItem>2014级</ComboBoxItem>
-                </ComboBox>
-                <Label Style="{StaticResource apartmentSignLabel}">状态</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-
-                    <ComboBoxItem>缺到</ComboBoxItem>
-                    <ComboBoxItem>请假</ComboBoxItem>
-
-                </ComboBox>
-                <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
-                <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
-            </StackPanel>
-        </Border>
-        <Border Grid.Row="3"
-                BorderBrush="#F2F3F4"
-                BorderThickness="0,0,0,1">
-            <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
-                <Label Style="{StaticResource apartmentSignLabel}">学号:</Label>
-                <TextBox Style="{StaticResource apartmentSignCondition}" />
-                <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-
-                    <ComboBoxItem>2015级</ComboBoxItem>
-                    <ComboBoxItem>2014级</ComboBoxItem>
-                </ComboBox>
-                <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
-
-                    <ComboBoxItem>信管</ComboBoxItem>
-                    <ComboBoxItem>管科</ComboBoxItem>
-                </ComboBox>
-                <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
-                <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
-            </StackPanel>
-        </Border>
-        <Border Grid.Row="4"
-                BorderBrush="#F2F3F4"
-                BorderThickness="0,1,0,0">
-            <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
-                <Label Style="{StaticResource apartmentSignLabel}">一次可添加1至4行数据(日期可不选，默认为当天):</Label>
-                <Border Style="{StaticResource apartmentSignOperate}">
-                    <Button Name="doSignAdd"
-                            Click="doSignAdd_Click"
-                            FontSize="14">
-                        确认添加
-                    </Button>
-                </Border>
-                <Border Style="{StaticResource apartmentSignOperate}">
-                    <Button Name="doCancel"
-                            Click="doCancel_Click"
-                            FontSize="14">
-                        取消
-                    </Button>
-                </Border>
-            </StackPanel>
+            <DataGrid Name="StuInfodataGrid"
+                      Grid.Row="1"
+                      Grid.Column="1"
+                      Margin="0,-81,0,0"
+                      VerticalAlignment="Bottom"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      ItemsSource="{Binding}"
+                      RowDetailsVisibilityMode="VisibleWhenSelected">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn>
+                        <DataGridCheckBoxColumn.Header>
+                            <CheckBox />
+                        </DataGridCheckBoxColumn.Header>
+                    </DataGridCheckBoxColumn>
+                    <DataGridTextColumn Binding="{Binding Path=class_name}" Header="班级" />
+                    <DataGridTextColumn Binding="{Binding Path=stu_num}" Header="学号" />
+                    <DataGridTextColumn Binding="{Binding Path=stu_name}" Header="姓名" />
+                    <DataGridTextColumn Binding="{Binding Path=sex}" Header="性别" />
+                </DataGrid.Columns>
+            </DataGrid>
         </Border>
     </Grid>
 </Window>

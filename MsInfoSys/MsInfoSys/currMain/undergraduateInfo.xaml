@@ -7,18 +7,6 @@
              d:DesignWidth="569.955"
              mc:Ignorable="d">
 
-    <!--<UserControl.Resources>
-    -->
-    <!--  create an instance of our DataProvider class  -->
-    <!--
-        <ObjectDataProvider x:Key="StudentDataProvider" ObjectType="{x:Type local:StudentDataProvider}" />
-    -->
-    <!--  define the method which is invoked to obtain our data  -->
-    <!--
-        <ObjectDataProvider x:Key="Students"
-                            MethodName="GetStudents"
-                            ObjectInstance="{StaticResource StudentDataProvider}" />
-    </UserControl.Resources>-->
 
     <Grid>
         <Grid.RowDefinitions>

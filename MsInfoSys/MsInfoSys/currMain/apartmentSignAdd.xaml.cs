@@ -57,9 +57,7 @@ namespace MsInfoSys.currMain
 
                 string sql = "select major_name  from ms_major";
 
-                //string sql = "select name  from major";
 
-                //string sql = "select major_name  from school_major";
 
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);

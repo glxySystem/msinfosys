@@ -29,8 +29,11 @@ namespace MsInfoSys.currMain
             //早点到，专业下拉表
             public List<String> MajorLstSource { get; set; }
             public string MajorLstSelect { get; set; }
-            /// 构造方法       
-            public apartmentSignAdd()
+
+        public List<String> ClassLstSource { get; set; }
+        public string ClassLstSelect { get; set; }
+        /// 构造方法       
+        public apartmentSignAdd()
             {
                 InitializeComponent();
                 GradeLstSource = new List<string>() { "全部" };
@@ -39,6 +42,9 @@ namespace MsInfoSys.currMain
                 MajorLstSource = new List<string>() { "全部" };
                 MajorLstSelect = "全部";
                 GetMajorName();
+                ClassLstSource = new List<string>() { "全部" };
+                ClassLstSelect = "全部";
+                GetClass();
                 this.DataContext = this;
             }
 
@@ -48,11 +54,13 @@ namespace MsInfoSys.currMain
             private void GetMajorName()
             {
                 /// 构造查询字符串
-<<<<<<< HEAD
-                string sql = "select name  from major";
-=======
-                string sql = "select major_name  from school_major";
->>>>>>> origin/master
+
+                string sql = "select major_name  from ms_major";
+
+                //string sql = "select name  from major";
+
+                //string sql = "select major_name  from school_major";
+
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -81,11 +89,9 @@ namespace MsInfoSys.currMain
             private void GetGrade()
             {
                 /// 构造查询字符串
-<<<<<<< HEAD
-                string sql = "select name  from grade";
-=======
-                string sql = "select grade_name  from school_grade";
->>>>>>> origin/master
+                string sql = "select grade_num  from ms_grade";
+
+
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -106,39 +112,65 @@ namespace MsInfoSys.currMain
                     MessageBox.Show("数据表为空！");
                 }
             }
+
+            private void GetClass()
+        {
+            /// 构造查询字符串
+            string sql = "select class_name  from ms_class";
+
+            MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
+
+            /// 设置XXX
+            DataSet ds = new DataSet();
+
+            mda.Fill(ds, "Class");
+
+            if (ds.Tables["Class"].Rows.Count > 0)
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    ClassLstSource.Add(row[0].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("数据表为空！");
+            }
+        }
         
             private void doSignAdd_Click(object sender, RoutedEventArgs e)
             {
+
                 //添加点到信息操作
                 Close();
             }
             //先读取数据，验证学号和年纪等是否匹配
-            public static ShowCheck(object sender, RoutedEventArgs e)
+            public static void ShowCheck(object sender, RoutedEventArgs e)
             {
-                StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building"，"ShowCheck");
+                StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building","ShowCheck");
                 DataSet ds = sdp.GetRawData();
                 if (ds.Tables["ShowCheck"].Rows.Count > 0)
                 {
                     foreach (DataRow row in ds.Tables[0].Rows)
                     {
                         //Console.WriteLine(row[0].ToString());
-                            ShowCheck.Add(row[0].ToString());
+                            //ShowCheck.Add(row[0].ToString());
                     }
                 }
                 else
                 {
                     MessageBox.Show("数据表为空！");
                 }
-                dt = ds.Tables["ShowCheck"];
+               // dt = ds.Tables["ShowCheck"];
              }
             //插入数据，插入stu_mor表
-            public static  Insert(Student student)
-            {
-                DataSet dt = new dt;
+            //public static  void Insert(Student student)
+            //{
+            //   // DataSet dt = new dt;
                 
-                StudentDataProvider sdp = new StudentDataProvider("insert into stu_mor(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", stu_mor(stu_id, moringsign_id, state);
+            //    //StudentDataProvider sdp = new StudentDataProvider("insert into stu_mor(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", stu_mor(stu_id, moringsign_id, state);
                          
-            }
+            //}
 
         private void doCancel_Click(object sender, RoutedEventArgs e)
             {

@@ -59,7 +59,7 @@ namespace MsInfoSys.currMain
         /// </summary>
         private void GetMajorName()
         {
-<<<<<<< HEAD
+
             ///// 构造查询字符串
             //string sql = "select name  from major";
 
@@ -67,17 +67,16 @@ namespace MsInfoSys.currMain
 
             ///// 设置XXX
             //DataSet ds = new DataSet();
-=======
+
             MajorLstSource = new List<string>() { "全部" };
->>>>>>> origin/master
+
 
             MajorLstSelect = "全部";
 
-<<<<<<< HEAD
-            StudentDataProvider sdp = new StudentDataProvider("select name  from major", "MajorName");
-=======
-            StudentDataProvider sdp = new StudentDataProvider("select major_name  from school_major", "MajorName");
->>>>>>> origin/master
+
+            StudentDataProvider sdp = new StudentDataProvider("select major_name  from ms_major", "MajorName");
+
+
 
             DataSet ds = sdp.GetRawData();
 
@@ -103,11 +102,8 @@ namespace MsInfoSys.currMain
             GradeLstSelect = "全部";
 
             /// 构造查询字符串
-<<<<<<< HEAD
-            string sql = "select name  from grade";
-=======
-            string sql = "select grade_name  from school_grade";
->>>>>>> origin/master
+            string sql = "select grade_num  from ms_grade";
+
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -143,7 +139,7 @@ namespace MsInfoSys.currMain
         {
             if ("全部" == ClassLstSelect && "全部" == MajorLstSelect && "全部" == GradeLstSelect)
             {
-                DataTable dt = DBHelper.ExecuteDataSet("select * from student");
+                DataTable dt = DBHelper.ExecuteDataSet("select * from ms_student");
 
                 StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
             }

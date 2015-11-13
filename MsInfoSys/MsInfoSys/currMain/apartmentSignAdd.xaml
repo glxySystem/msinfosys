@@ -28,19 +28,29 @@
                 <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
                 <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">周数:</Label>
-                <ComboBox ItemsSource="{Binding ClassLstSource}"
+                <ComboBox ItemsSource="{Binding WeekLstSource}"
                           SelectedIndex="0"
-                          SelectedItem="{Binding ClassLstSource}"
+                          SelectedItem="{Binding WeekLstSource}"
                           Style="{StaticResource apartmentSignCondition}" />
+                <Border Width="60"
+                        Height="24"
+                        Margin="10,0,0,0"
+                        Background="#2C97DF">
+                    <Button Click="Query_Click"
+                            FontSize="14"
+                            Foreground="White">
+                        查看
+                    </Button>
+                </Border>
+
             </StackPanel>
         </Border>
         <Border Grid.Row="1"
                 BorderBrush="#F2F3F4"
                 BorderThickness="0,0,0,1">
 
-            <DataGrid Name="StuInfodataGrid"
+            <DataGrid Name="StuDataGrid"
                       Grid.Row="1"
-                      Grid.Column="1"
                       Margin="0,-81,0,0"
                       VerticalAlignment="Bottom"
                       AutoGenerateColumns="False"

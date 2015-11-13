@@ -30,6 +30,9 @@ namespace MsInfoSys.currMain
             public List<String> MajorLstSource { get; set; }
             public string MajorLstSelect { get; set; }
 
+            public List<string> WeekLstSource { get; set; }
+            public string WeekLstSelect { get; set; }
+
         public List<String> ClassLstSource { get; set; }
         public string ClassLstSelect { get; set; }
         /// 构造方法       
@@ -45,6 +48,9 @@ namespace MsInfoSys.currMain
                 ClassLstSource = new List<string>() { "全部" };
                 ClassLstSelect = "全部";
                 GetClass();
+                WeekLstSource = new List<string>() { "全部" };
+                WeekLstSelect = "全部";
+                GetWeek();
                 this.DataContext = this;
             }
 
@@ -54,12 +60,7 @@ namespace MsInfoSys.currMain
             private void GetMajorName()
             {
                 /// 构造查询字符串
-
                 string sql = "select major_name  from ms_major";
-
-
-
-
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
                 /// 设置XXX
@@ -69,12 +70,8 @@ namespace MsInfoSys.currMain
 
                 if (ds.Tables["MajorName"].Rows.Count > 0)
                 {
-                    /// Test Code
-                    //MessageBox.Show(ds.Tables["MajorName"].Rows.Count.ToString());
-
                     foreach (DataRow row in ds.Tables[0].Rows)
                     {
-                        //Console.WriteLine(row[0].ToString());
                         MajorLstSource.Add(row[0].ToString());
                     }
                 }
@@ -88,8 +85,6 @@ namespace MsInfoSys.currMain
             {
                 /// 构造查询字符串
                 string sql = "select grade_num  from ms_grade";
-
-
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 
@@ -111,7 +106,7 @@ namespace MsInfoSys.currMain
                 }
             }
 
-            private void GetClass()
+        private void GetClass()
         {
             /// 构造查询字符串
             string sql = "select class_name  from ms_class";
@@ -135,40 +130,81 @@ namespace MsInfoSys.currMain
                 MessageBox.Show("数据表为空！");
             }
         }
-        
-            private void doSignAdd_Click(object sender, RoutedEventArgs e)
+
+        private void GetWeek()
+        {
+            /// 构造查询字符串
+            string sql = "select week_num  from ms_week";
+
+            MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
+
+            /// 设置XXX
+            DataSet ds = new DataSet();
+
+            mda.Fill(ds, "Week");
+
+            if (ds.Tables["Week"].Rows.Count > 0)
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                   WeekLstSource.Add(row[0].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("数据表为空！");
+            }
+        }
+
+        private void doSignAdd_Click(object sender, RoutedEventArgs e)
             {
 
                 //添加点到信息操作
                 Close();
             }
             //先读取数据，验证学号和年纪等是否匹配
-            public static void ShowCheck(object sender, RoutedEventArgs e)
+            private void ShowCheck(object sender, RoutedEventArgs e)
             {
-                StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building","ShowCheck");
-                DataSet ds = sdp.GetRawData();
-                if (ds.Tables["ShowCheck"].Rows.Count > 0)
-                {
-                    foreach (DataRow row in ds.Tables[0].Rows)
-                    {
-                        //Console.WriteLine(row[0].ToString());
-                            //ShowCheck.Add(row[0].ToString());
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("数据表为空！");
-                }
-               // dt = ds.Tables["ShowCheck"];
-             }
-            //插入数据，插入stu_mor表
-            //public static  void Insert(Student student)
+                //StudentDataProvider sdp = new StudentDataProvider("select * from ms_student","ShowCheck");
+                //DataSet ds = sdp.GetRawData();
+                //if (ds.Tables["ShowCheck"].Rows.Count > 0)
+                //{
+                //    foreach (DataRow row in ds.Tables[0].Rows)
+                //    {
+                //    //Console.WriteLine(row[0].ToString());
+                //    //ShowCheck.Add(row[0].ToString());
+                //    StuInfodataGrid.Add(row[0].ToString());
+                //}
+                //}
+                //else
+                //{
+                //    MessageBox.Show("数据表为空！");
+                //}
+            // dt = ds.Tables["ShowCheck"];
+                //DataTable dt = DBHelper.ExecuteDataSet("select * from ms_student");
+                //StuDataGrid.ItemsSource = dt.DefaultView;//数据才会显示
+        }
+
+        private void Query_Click(object sender, RoutedEventArgs e)
+        {
+            ////Close();
+            //StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building", "ShowCheck");
+            //DataSet ds = sdp.GetRawData();
+            //if (ds.Tables["ShowCheck"].Rows.Count > 0)
             //{
-            //   // DataSet dt = new dt;
-                
-            //    //StudentDataProvider sdp = new StudentDataProvider("insert into stu_mor(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", stu_mor(stu_id, moringsign_id, state);
-                         
+            //    foreach (DataRow row in ds.Tables[0].Rows)
+            //    {
+            //        //Console.WriteLine(row[0].ToString());
+            //        //ShowCheck.Add(row[0].ToString());
+            //    }
             //}
+            //else
+            //{
+            //    MessageBox.Show("数据表为空！");
+            //}
+            DataTable dt = DBHelper.ExecuteDataSet("select * from ms_student");
+            StuDataGrid.ItemsSource = dt.DefaultView;//数据才会显示
+        }
 
         private void doCancel_Click(object sender, RoutedEventArgs e)
             {

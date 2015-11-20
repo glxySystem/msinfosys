@@ -187,9 +187,12 @@ namespace MsInfoSys.currMain
 
         private void Query_Click(object sender, RoutedEventArgs e)
         {
+            string para = ClassLstSelect;
+            string sql = string.Format("select * from ms_student where class_name='{0}'", para);
             //MessageBox.Show();
             ClassCombox.SelectedItem.ToString();
-            DataTable dt = DBHelper.ExecuteDataSet("select * from ms_student");
+            //DataTable dt = DBHelper.ExecuteDataSet("select * from ms_student where ");
+            DataTable dt = DBHelper.ExecuteDataSet(sql);
             StuDataGrid.ItemsSource = dt.DefaultView;//数据才会显示
         }
 

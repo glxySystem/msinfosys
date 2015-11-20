@@ -102,7 +102,7 @@ namespace MsInfoSys.currMain
                 }
                 else
                 {
-                    MessageBox.Show("数据表为空！");
+                    MessageBox.Show("数据表空！");
                 }
             }
 

@@ -21,9 +21,10 @@
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
 
                 <Label Style="{StaticResource apartmentSignLabel}">班级:</Label>
-                <ComboBox ItemsSource="{Binding ClassLstSource}"
+                <ComboBox Name="ClassCombox"
+                          ItemsSource="{Binding ClassLstSource}"
                           SelectedIndex="0"
-                          SelectedItem="{Binding ClassLstSource}"
+                          SelectedItem="{Binding ClassLstSelect}"
                           Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">日期:</Label>
                 <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource apartmentSignCondition}" />

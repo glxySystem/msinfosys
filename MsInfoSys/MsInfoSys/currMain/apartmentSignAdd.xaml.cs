@@ -187,21 +187,8 @@ namespace MsInfoSys.currMain
 
         private void Query_Click(object sender, RoutedEventArgs e)
         {
-            ////Close();
-            //StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building", "ShowCheck");
-            //DataSet ds = sdp.GetRawData();
-            //if (ds.Tables["ShowCheck"].Rows.Count > 0)
-            //{
-            //    foreach (DataRow row in ds.Tables[0].Rows)
-            //    {
-            //        //Console.WriteLine(row[0].ToString());
-            //        //ShowCheck.Add(row[0].ToString());
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("数据表为空！");
-            //}
+            //MessageBox.Show();
+            ClassCombox.SelectedItem.ToString();
             DataTable dt = DBHelper.ExecuteDataSet("select * from ms_student");
             StuDataGrid.ItemsSource = dt.DefaultView;//数据才会显示
         }

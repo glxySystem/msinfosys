@@ -49,7 +49,7 @@ namespace MsInfoSys.currMain
         {
             /// 构造查询字符串
 
-            string sql = "select major_name  from school_major";
+            string sql = "select major_name  from ms_major";
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
 

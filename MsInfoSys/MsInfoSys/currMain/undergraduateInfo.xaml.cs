@@ -24,7 +24,7 @@ namespace MsInfoSys.currMain
     /// </summary>
     public partial class undergraduateInfo : UserControl
     {
-        public List<String> si { get; set; }
+        //public List<String> si { get; set; }
         //在校生信息，年级下拉表
         public List<String> GradeLstSource { get; set; }
         public string GradeLstSelect { get; set; }
@@ -96,13 +96,16 @@ namespace MsInfoSys.currMain
 
         private void GetGrade()
         {
-            
+            //获取当前年份
+            int year = DateTime.Now.Year;
+            //MessageBox.Show(y.ToString());
+
             GradeLstSource = new List<string>() { "全部" };
 
             GradeLstSelect = "全部";
 
             /// 构造查询字符串
-            string sql = "select grade_num  from ms_grade";
+            string sql = string.Format("select grade_num from ms_grade where ('{0}'- grade_num) < 4", year);
 
 
             MySqlDataAdapter mda = new MySqlDataAdapter(sql, DBHelper.MySQLStr);
@@ -156,17 +159,9 @@ namespace MsInfoSys.currMain
             e.Handled = true;
             if (StuInfodataGrid.SelectedItem != null)
             {
-                //AppGlobal.ShowPatientInfo.Execute(DGView.SelectedItem);
-                //StuInfodataGrid.SelectAll();
-                //object dv = StuInfodataGrid.SelectedItem;
 
                 DataRowView mySelectedElement = (DataRowView)StuInfodataGrid.SelectedItem;
                 string param = mySelectedElement.Row["uid"].ToString();
-                
-                //MessageBox.Show(result);
-                //DataTable dt = DBHelper.ExecuteDataSet("select * from student where uid = @getId",new MySqlParameter("@getId",result));
-
-                //StuInfodataGrid.ItemsSource = dt.DefaultView;//数据才会显示
                 StudentInfoDialog sid = new StudentInfoDialog(param);
                 sid.ShowDialog();
 

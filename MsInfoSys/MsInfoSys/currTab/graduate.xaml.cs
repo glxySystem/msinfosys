@@ -25,15 +25,13 @@ namespace MsInfoSys.currTab
             InitializeComponent();
         }
 
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            currMain.Content = new currMain.tabGraduate();
-        }
         //加载毕业生信息模块
         private void graduateInfoStack_MouseDown(object sender, MouseButtonEventArgs e)
         {
             graduateInfoStack.Background = new SolidColorBrush(Color.FromRgb(242, 242, 242));
             graduateDevelopmentStack.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+
+            currMain.Content = new currMain.tabGraduateInfo();
         }
         //加载毕业生去向模块
         private void graduateDevelopmentStack_MouseDown(object sender, MouseButtonEventArgs e)

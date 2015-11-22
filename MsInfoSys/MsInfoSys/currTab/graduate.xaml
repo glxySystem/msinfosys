@@ -4,7 +4,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MsInfoSys.currTab"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             Loaded="UserControl_Loaded"
              d:DesignHeight="300"
              d:DesignWidth="300"
              mc:Ignorable="d">
@@ -18,19 +17,56 @@
                 Padding="0,0,0,2">
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <Button Name="tab_butn1">
-                    <StackPanel Name="graduateInfoStack" Style="{StaticResource tabStack}" MouseDown="graduateInfoStack_MouseDown">
+                    <StackPanel Name="graduateInfoStack"
+                                MouseDown="graduateInfoStack_MouseDown"
+                                Style="{StaticResource tabStack}">
                         <Image Source="../icon/graduateInfo.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">基本信息</Label>
                     </StackPanel>
                 </Button>
                 <Button Name="tab_btn2">
-                    <StackPanel Name="graduateDevelopmentStack" Style="{StaticResource tabStack}" MouseDown="graduateDevelopmentStack_MouseDown">
+                    <StackPanel Name="graduateDevelopmentStack"
+                                MouseDown="graduateDevelopmentStack_MouseDown"
+                                Style="{StaticResource tabStack}">
                         <Image Source="../icon/graduateDevelopment.png" Style="{StaticResource tabImg}" />
                         <Label Style="{StaticResource tabLabel}">毕业去向</Label>
                     </StackPanel>
                 </Button>
             </StackPanel>
         </Border>
-        <ContentControl Name="currMain" Grid.Row="1" />
+        <ContentControl Name="currMain" Grid.Row="1">
+            <DockPanel>
+                <TabControl Margin="20,0,0,0"
+                            SelectedIndex="1"
+                            Style="{DynamicResource RoundTabControl}">
+
+                    <TabItem Background="#FFAEFF7A"
+                             Header="11"
+                             Style="{DynamicResource RoundTabItem}">
+                        <Image Source="../icon/index/indeximg2.png" Style="{StaticResource apartmentDefaultImg}" />
+                    </TabItem>
+                    <TabItem Background="#FFA6D5FF"
+                             Header="12"
+                             Style="{DynamicResource RoundTabItem}">
+                        <Image Source="../icon/index/indeximg3.png" Style="{StaticResource apartmentDefaultImg}" />
+                    </TabItem>
+                    <TabItem Background="#EBB642"
+                             Header="13"
+                             Style="{DynamicResource RoundTabItem}">
+                        <Image Source="../icon/index/indeximg1.png" Style="{StaticResource apartmentDefaultImg}" />
+                    </TabItem>
+                    <TabItem Background="#FFAEFF7A"
+                             Header="14"
+                             Style="{DynamicResource RoundTabItem}">
+                        <Image Source="../icon/index/indeximg2.png" Style="{StaticResource apartmentDefaultImg}" />
+                    </TabItem>
+                    <TabItem Background="#FFA6D5FF"
+                             Header="15"
+                             Style="{DynamicResource RoundTabItem}">
+                        <Image Source="../icon/index/indeximg3.png" Style="{StaticResource apartmentDefaultImg}" />
+                    </TabItem>
+                </TabControl>
+            </DockPanel>
+        </ContentControl>
     </Grid>
 </UserControl>

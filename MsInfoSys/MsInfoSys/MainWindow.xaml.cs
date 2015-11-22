@@ -34,6 +34,7 @@ namespace MsInfoSys
         public MainWindow()
         {
             InitializeComponent();
+            this.userName.Content = AuthUser.username;
             ShowIcon();
 
             //保证窗体显示在上方。 
@@ -199,6 +200,16 @@ namespace MsInfoSys
             BitmapImage image4 = new BitmapImage(new Uri("\\icon\\document.png", UriKind.Relative));
             documentImg.Source = image4;
 
+            quality.DataContext = "1";
+            qualityStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image5 = new BitmapImage(new Uri("\\icon\\quality.png", UriKind.Relative));
+            qualityImg.Source = image5;
+
+            decision.DataContext = "1";
+            decisionStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image6 = new BitmapImage(new Uri("\\icon\\decision.png", UriKind.Relative));
+            decisionImg.Source = image6;
+
             index.DataContext = "2";
             currTab.Content = new currTab.index();
         }
@@ -259,6 +270,16 @@ namespace MsInfoSys
             BitmapImage image4 = new BitmapImage(new Uri("\\icon\\document.png", UriKind.Relative));
             documentImg.Source = image4;
 
+            quality.DataContext = "1";
+            qualityStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image5 = new BitmapImage(new Uri("\\icon\\quality.png", UriKind.Relative));
+            qualityImg.Source = image5;
+
+            decision.DataContext = "1";
+            decisionStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image6 = new BitmapImage(new Uri("\\icon\\decision.png", UriKind.Relative));
+            decisionImg.Source = image6;
+
             undergraduate.DataContext = "2";
             currTab.Content = new currTab.undergraduate();
         }
@@ -303,6 +324,16 @@ namespace MsInfoSys
             documentStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
             BitmapImage image4 = new BitmapImage(new Uri("\\icon\\document.png", UriKind.Relative));
             documentImg.Source = image4;
+
+            quality.DataContext = "1";
+            qualityStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image5 = new BitmapImage(new Uri("\\icon\\quality.png", UriKind.Relative));
+            qualityImg.Source = image5;
+
+            decision.DataContext = "1";
+            decisionStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image6 = new BitmapImage(new Uri("\\icon\\decision.png", UriKind.Relative));
+            decisionImg.Source = image6;
 
             graduate.DataContext = "2";
             currTab.Content = new currTab.graduate();
@@ -350,6 +381,16 @@ namespace MsInfoSys
             BitmapImage image4 = new BitmapImage(new Uri("\\icon\\document.png", UriKind.Relative));
             documentImg.Source = image4;
 
+            quality.DataContext = "1";
+            qualityStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image5 = new BitmapImage(new Uri("\\icon\\quality.png", UriKind.Relative));
+            qualityImg.Source = image5;
+
+            decision.DataContext = "1";
+            decisionStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image6 = new BitmapImage(new Uri("\\icon\\decision.png", UriKind.Relative));
+            decisionImg.Source = image6;
+
             apartment.DataContext = "2";
             currTab.Content = new currTab.apartment();
         }
@@ -396,6 +437,16 @@ namespace MsInfoSys
             BitmapImage image4 = new BitmapImage(new Uri("\\icon\\apartment.png", UriKind.Relative));
             apartmentImg.Source = image4;
 
+            quality.DataContext = "1";
+            qualityStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image5 = new BitmapImage(new Uri("\\icon\\quality.png", UriKind.Relative));
+            qualityImg.Source = image5;
+
+            decision.DataContext = "1";
+            decisionStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image6 = new BitmapImage(new Uri("\\icon\\decision.png", UriKind.Relative));
+            decisionImg.Source = image6;
+
             document.DataContext = "2";
         }
 
@@ -418,6 +469,114 @@ namespace MsInfoSys
             }
         }
 
+        private void quality_Click(object sender, RoutedEventArgs e)
+        {
+            index.DataContext = "1";
+            indexStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image1 = new BitmapImage(new Uri("\\icon\\index.png", UriKind.Relative));
+            indexImg.Source = image1;
 
+            undergraduate.DataContext = "1";
+            undergraduateStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image2 = new BitmapImage(new Uri("\\icon\\undergraduate.png", UriKind.Relative));
+            undergraduateImg.Source = image2;
+
+            graduate.DataContext = "1";
+            graduateStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image3 = new BitmapImage(new Uri("\\icon\\graduate.png", UriKind.Relative));
+            graduateImg.Source = image3;
+
+            apartment.DataContext = "1";
+            apartmentStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image4 = new BitmapImage(new Uri("\\icon\\apartment.png", UriKind.Relative));
+            apartmentImg.Source = image4;
+
+            document.DataContext = "1";
+            documentStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image5 = new BitmapImage(new Uri("\\icon\\document.png", UriKind.Relative));
+            documentImg.Source = image5;
+
+            decision.DataContext = "1";
+            decisionStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image6 = new BitmapImage(new Uri("\\icon\\decision.png", UriKind.Relative));
+            decisionImg.Source = image6;
+
+            quality.DataContext = "2";
+        }
+
+        private void quality_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if ((string)quality.DataContext == "1")
+            {
+                qualityStack.Background = new SolidColorBrush(Color.FromRgb(69, 76, 86));
+                BitmapImage image = new BitmapImage(new Uri("\\icon\\qualityChange.png", UriKind.Relative));
+                qualityImg.Source = image;
+            }
+        }
+
+        private void quality_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if ((string)quality.DataContext == "1")
+            {
+                qualityStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+                BitmapImage image = new BitmapImage(new Uri("\\icon\\quality.png", UriKind.Relative));
+                qualityImg.Source = image;
+            }
+        }
+
+        private void decision_Click(object sender, RoutedEventArgs e)
+        {
+            index.DataContext = "1";
+            indexStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image1 = new BitmapImage(new Uri("\\icon\\index.png", UriKind.Relative));
+            indexImg.Source = image1;
+
+            undergraduate.DataContext = "1";
+            undergraduateStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image2 = new BitmapImage(new Uri("\\icon\\undergraduate.png", UriKind.Relative));
+            undergraduateImg.Source = image2;
+
+            graduate.DataContext = "1";
+            graduateStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image3 = new BitmapImage(new Uri("\\icon\\graduate.png", UriKind.Relative));
+            graduateImg.Source = image3;
+
+            apartment.DataContext = "1";
+            apartmentStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image4 = new BitmapImage(new Uri("\\icon\\apartment.png", UriKind.Relative));
+            apartmentImg.Source = image4;
+
+            document.DataContext = "1";
+            documentStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image5 = new BitmapImage(new Uri("\\icon\\document.png", UriKind.Relative));
+            documentImg.Source = image5;
+
+            quality.DataContext = "1";
+            qualityStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+            BitmapImage image6 = new BitmapImage(new Uri("\\icon\\quality.png", UriKind.Relative));
+            qualityImg.Source = image6;
+
+            decision.DataContext = "2";
+        }
+
+        private void decision_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if ((string)decision.DataContext == "1")
+            {
+                decisionStack.Background = new SolidColorBrush(Color.FromRgb(69, 76, 86));
+                BitmapImage image = new BitmapImage(new Uri("\\icon\\decisionChange.png", UriKind.Relative));
+                decisionImg.Source = image;
+            }
+        }
+
+        private void decision_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if ((string)decision.DataContext == "1")
+            {
+                decisionStack.Background = new SolidColorBrush(Color.FromRgb(53, 60, 70));
+                BitmapImage image = new BitmapImage(new Uri("\\icon\\decision.png", UriKind.Relative));
+                decisionImg.Source = image;
+            }
+        }
     }
 }

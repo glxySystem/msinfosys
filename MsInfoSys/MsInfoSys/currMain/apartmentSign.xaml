@@ -18,9 +18,18 @@
                 BorderThickness="0,0,0,1">
             <StackPanel Margin="14,0,0,0" Orientation="Horizontal">
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}"  ItemsSource="{Binding GradeLstSource}" SelectedItem="{Binding GradeLstSelect}"/>
+
+                <ComboBox Name="GradeList"
+                          ItemsSource="{Binding GradeLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding GradeLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">专业:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}" ItemsSource="{Binding MajorLstSource}" SelectedItem="{Binding MajorLstSelect}"/>
+                <ComboBox Name="MajorList"
+                          ItemsSource="{Binding MajorLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding MajorLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">起始:</Label>
                 <DatePicker Style="{StaticResource apartmentSignCondition}" />
                 <Label Style="{StaticResource apartmentSignLabel}">结束:</Label>
@@ -29,22 +38,27 @@
                         Height="24"
                         Margin="10,0,0,0"
                         Background="#2C97DF">
-                    <Button FontSize="14" Foreground="White">查看</Button>
+                    <Button Click="Show_Click"
+                            FontSize="14"
+                            Foreground="White">
+                        查看
+                    </Button>
                 </Border>
             </StackPanel>
         </Border>
         <DataGrid Name="apartmentSignTable"
                   Grid.Row="1"
-                  AlternatingRowBackground="#efefef"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
-                  Padding="0,5,0,5"
-                  RowBackground="White"
+                  IsReadOnly="True"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="编号" />
-                <DataGridTextColumn Header="姓名" />
-                <DataGridTextColumn Header="地址" />
+                <DataGridTextColumn Binding="{Binding Path=stu_number}" Header="学号" />
+                <DataGridTextColumn Binding="{Binding Path=stu_name}" Header="姓名" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="专业" />
+                <DataGridTextColumn Binding="{Binding Path=class_name}" Header="班级" />
+                <DataGridTextColumn Binding="{Binding Path=ban_num}" Header="楼栋" />
+                <DataGridTextColumn Binding="{Binding Path=dor_num}" Header="寝室" />
             </DataGrid.Columns>
         </DataGrid>
         <Border Grid.Row="2"

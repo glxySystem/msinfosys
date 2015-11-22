@@ -4,12 +4,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MsInfoSys.currMain"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignWidth="569.955"
              mc:Ignorable="d">
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="*" />
-
+            <RowDefinition Height="50" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
@@ -27,35 +30,89 @@
                           SelectedIndex="0"
                           SelectedItem="{Binding MajorLstSelect}"
                           Style="{StaticResource apartmentSignCondition}" />
-                <!--<Label Style="{StaticResource apartmentSignLabel}">起始:</Label>
-                <DatePicker Style="{StaticResource apartmentSignCondition}" />
-                <Label Style="{StaticResource apartmentSignLabel}">结束:</Label>
-                <DatePicker Style="{StaticResource apartmentSignCondition}" />-->
+                <Label Style="{StaticResource apartmentSignLabel}">班级:</Label>
+                <ComboBox ItemsSource="{Binding ClassLstSource}"
+                          SelectedIndex="0"
+                          SelectedItem="{Binding ClassLstSelect}"
+                          Style="{StaticResource apartmentSignCondition}" />
                 <Border Width="60"
                         Height="24"
                         Margin="10,0,0,0"
                         Background="#2C97DF">
-                    <Button FontSize="14" Foreground="White">查看</Button>
+                    <Button Click="QueryButton_Click"
+                            FontSize="14"
+                            Foreground="White">
+                        查看
+                    </Button>
                 </Border>
             </StackPanel>
         </Border>
 
-        <DataGrid Name="dataGrid1"
+        <DataGrid Name="StuInfodataGrid"
                   Grid.Row="1"
                   Grid.Column="1"
-                  AlternatingRowBackground="#efefef"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
-                  Padding="0,5,0,5"
-                  RowBackground="White"
+                  IsReadOnly="True"
+                  ItemsSource="{Binding}"
+                  MouseDoubleClick="StuInfodataGrid_MouseDoubleClick"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="500" Header="编号" />
-                <DataGridTextColumn Width="300" Header="姓名" />
-                <DataGridTextColumn Width="200" Header="地址" />
+                <DataGridTextColumn Binding="{Binding Path=school_name}" Header="院系" />
+                <DataGridTextColumn Binding="{Binding Path=class_name}" Header="班级" />
+                <DataGridTextColumn Binding="{Binding Path=stu_num}" Header="学号" />
+                <DataGridTextColumn Binding="{Binding Path=stu_name}" Header="姓名" />
+                <DataGridTextColumn Binding="{Binding Path=sex}" Header="性别" />
+                <DataGridTextColumn Binding="{Binding Path=birth_date}" Header="出生日期" />
+                <DataGridTextColumn Binding="{Binding Path=nationality}" Header="民族" />
+                <!--<DataGridTextColumn Binding="{Binding Path=birth_place}" Header="出生地" />-->
+                <DataGridTextColumn Binding="{Binding Path=native_place}" Header="籍贯" />
+                <DataGridTextColumn Binding="{Binding Path=idcard_number}" Header="身份证号" />
+                <!--<DataGridTextColumn Binding="{Binding Path=exam_number}" Header="考生号" />-->
+                <DataGridTextColumn Binding="{Binding Path=enrollment_date}" Header="入学日期" />
+
+                <!--<DataGridTextColumn Width="80"
+                                    Binding="{Binding Name}"
+                                    Header="Name" />
+                <DataGridTextColumn Width="50"
+                                    Binding="{Binding Age}"
+                                    Header="Age" />
+                -->
+                <!--<DataGridComboBoxColumn Width="80"
+                                        Header="Sex"
+                                        ItemsSource="{Binding Source={StaticResource sexEnum}}"
+                                        SelectedItemBinding="{Binding Sex}" />-->
+                <!--
+                <DataGridCheckBoxColumn Width="100"
+                                        Binding="{Binding Pass}"
+                                        Header="Pass Exam?" />
+                <DataGridHyperlinkColumn Width="150"
+                                         Binding="{Binding Email}"
+                                         Header="Email" />-->
             </DataGrid.Columns>
         </DataGrid>
-        <ToolBar Grid.Row="2">
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Margin="5" Text="转到" />
+            <TextBox Name="tbxPageNum" Text="" />
+            <TextBlock Text="页" />
+            <Button Content="GO" />
+            <Button Name="btnUp"
+                    VerticalAlignment="Center"
+                    Content="上一页" />
+            <Button Name="btnNext"
+                    VerticalAlignment="Center"
+                    Content="下一页" />
+            <TextBlock Height="20">
+                <TextBlock Text="【共" />
+                <TextBlock Name="tbkTotal" Foreground="Red" />
+                <TextBlock Text="页】" />
+                <TextBlock Text="【当前" />
+                <TextBlock Name="tbkCurrentsize" Foreground="Red" />
+                <TextBlock Text="页】" />
+            </TextBlock>
+        </StackPanel>
+        <ToolBar Grid.Row="3">
             <Button Name="btnAdd" Content="添加" />
             <Button Name="btnEdit" Content="编辑" />
             <Button Name="btnDelete" Content="删除" />

@@ -1,8 +1,8 @@
 obj
-<<<<<<< HEAD
-
 MsInfoSys/MsInfoSys/bin/Debug/MsInfoSys.exe
 MsInfoSys/MsInfoSys/bin/Debug/MsInfoSys.pdb
-=======
-*.suo
->>>>>>> origin/master
+MsInfoSys/MsInfoSys/bin/Debug/MsInfoSys.exe
+MsInfoSys/MsInfoSys/bin/Debug/MsInfoSys.pdb
+MsInfoSys/.vs/MsInfoSys/v14/.suo
+MsInfoSys/MsInfoSys/bin/Debug/MsInfoSys.exe
+MsInfoSys/MsInfoSys/bin/Debug/MsInfoSys.pdb

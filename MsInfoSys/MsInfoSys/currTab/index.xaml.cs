@@ -28,5 +28,10 @@ namespace MsInfoSys.currTab
         {
             indexContent.Content = new currMain.indexContent.indexClock();
         }
+
+        private void indexcontact_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            indexContent.Content = new currMain.indexContent.indexContact();
+        }
     }
 }

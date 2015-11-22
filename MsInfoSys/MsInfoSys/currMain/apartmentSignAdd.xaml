@@ -56,7 +56,7 @@
                 <TextBox Name="TextBox1" Style="{StaticResource apartmentSignCondition}" />
 
                 <Label Style="{StaticResource apartmentSignLabel}">年级:</Label>
-                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}">
+                <ComboBox SelectedIndex="0" Style="{StaticResource apartmentSignCondition}" Name="combox2">
 
                     <ComboBoxItem>2015级</ComboBoxItem>
                     <ComboBoxItem>2014级</ComboBoxItem>

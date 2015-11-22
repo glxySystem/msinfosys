@@ -149,14 +149,22 @@ namespace MsInfoSys.currMain
             {
                 StudentDataProvider sdp = new StudentDataProvider("select stu_num,student.name,class.name,building.num,dormitory.num from school,major,class,student,dormitory,building","ShowCheck");
                 DataSet ds = sdp.GetRawData();
-                if (ds.Tables["ShowCheck"].Rows.Count > 0)
-                {
-                    foreach (DataRow row in ds.Tables[0].Rows)
-                    {
-                        //Console.WriteLine(row[0].ToString());
-                            //ShowCheck.Add(row[0].ToString());
-                    }
-                }
+            
+                //if (ds.Tables["ShowCheck"].Rows.Count > 0)
+                //{
+                //    foreach (DataRow mDr in ds.Tables[0].Rows)
+                //    {
+                //        foreach (DataColumn mDc in ds.Tables[0].Columns)
+                //        {
+                //            Console.WriteLine(mDr[mDc].ToString());
+                //        if (ds.Tables["mDr"].Rows.Count > 0)
+                //         {
+                //                mDr[1] == TextBox1.text;
+                //                mDr[2]==
+                //            }
+                //        }
+                //    }
+             }
                 else
                 {
                     MessageBox.Show("数据表为空！");
@@ -166,13 +174,16 @@ namespace MsInfoSys.currMain
             //插入数据，插入stu_mor表
             //public static  void Insert(Student student)
             //{
-            //   // DataSet dt = new dt;
-                
-            //    //StudentDataProvider sdp = new StudentDataProvider("insert into stu_mor(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", stu_mor(stu_id, moringsign_id, state);
-                         
-            //}
+            //    DataSet dt = new dt;
+                if
+                {
+                    
+                }
+            //   StudentDataProvider sdp = new StudentDataProvider("insert into stu_mor(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", stu_mor(stu_id, moringsign_id, state);
+                  StudentDataProvider sdp = new StudentDataProvider("insert into ms_stu_morningsign(stu_id,moringsign_id,state) values('{0}','{1}','{2}')", ms_stu_morningsign(stu_id, id, name);
+//}
 
-        private void doCancel_Click(object sender, RoutedEventArgs e)
+private void doCancel_Click(object sender, RoutedEventArgs e)
             {
                 Close();
             }
